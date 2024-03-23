@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { getAllCountries } from '@/app/api/countries/route'
+import { getAllCountries } from '@/lib/api'
 
 export default async function Home() {
   const countries = getAllCountries()
