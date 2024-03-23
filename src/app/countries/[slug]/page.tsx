@@ -33,9 +33,9 @@ export default async function Country({ params }: Params) {
     .reduce((r, [k, v]) => ({ ...r, [k]: v }), {})
 
   return (
-    <article>
+    <article className="mx-auto w-full max-w-4xl">
       <header className="mb-8">
-        <h1 className="flex items-center justify-center">
+        <h1 className="text-center">
           <span aria-hidden className="mr-2">
             {country.icon}
           </span>
@@ -44,7 +44,7 @@ export default async function Country({ params }: Params) {
       </header>
 
       <h2 className="sr-only">Rankings</h2>
-      <section className="mx-auto grid w-full max-w-4xl grid-cols-4 gap-4">
+      <section className="grid w-full gap-4 md:grid-cols-3 lg:grid-cols-4">
         {Object.keys(data).map((dataset) => (
           <dl
             key={dataset}

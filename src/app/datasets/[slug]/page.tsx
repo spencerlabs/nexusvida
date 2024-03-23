@@ -24,11 +24,11 @@ export default async function Dataset({ params }: Params) {
     : []
 
   return (
-    <article>
+    <article className="mx-auto w-full max-w-md">
       <header className="mb-8 text-center">
         <h1 className="mb-1">{dataset.title}</h1>
 
-        <p className="mx-auto w-full max-w-md text-center text-xs">
+        <p className="text-center text-xs">
           Source ({dataset.year}):{' '}
           <Link
             href={dataset.url}
@@ -40,9 +40,14 @@ export default async function Dataset({ params }: Params) {
         </p>
       </header>
 
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      {content && (
+        <div
+          className="mb-8 text-sm"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
 
-      <table className="mx-auto w-full max-w-md select-none">
+      <table className="w-full select-none">
         <thead>
           <tr className="grid grid-cols-[44px_1fr] gap-2 border-b-2 border-stone-400 px-2 py-2 text-xs font-bold uppercase dark:border-stone-600">
             <th>Rank</th>
@@ -67,7 +72,7 @@ export default async function Dataset({ params }: Params) {
               <td className="">
                 <Link
                   href={`/countries/${country.slug}`}
-                  className="after:absolute after:inset-0 after:content-['']"
+                  className="flex after:absolute after:inset-0 after:content-['']"
                 >
                   <span aria-hidden className="mr-2">
                     {country.icon}
