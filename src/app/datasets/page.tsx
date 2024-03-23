@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { getAllDatasets } from '@/app/api/datasets/route'
+import { getAllDatasets } from '@/lib/api'
 import Link from 'next/link'
 
 export default function DatasetsPage() {

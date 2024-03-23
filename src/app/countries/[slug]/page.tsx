@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { getCountryBySlug, getCountrySlugs } from '@/app/api/countries/route'
-import { getAllDatasets } from '@/app/api/datasets/route'
+import { getAllDatasets, getCountryBySlug, getCountrySlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 
 type Params = {

@@ -1,4 +1,4 @@
-import { getDatasetBySlug } from '../route'
+import { getDatasetBySlug } from '@/lib/api'
 
 export async function GET(
   request: Request,

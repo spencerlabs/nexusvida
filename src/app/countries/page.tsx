@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { getAllCountries } from '@/app/api/countries/route'
+import { getAllCountries } from '@/lib/api'
 import Link from 'next/link'
 
 export default function CountriesPage() {

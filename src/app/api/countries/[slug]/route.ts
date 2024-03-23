@@ -1,4 +1,4 @@
-import { getCountryBySlug } from '../route'
+import { getCountryBySlug } from '@/lib/api'
 
 export async function GET(
   request: Request,

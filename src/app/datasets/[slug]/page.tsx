@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { getDatasetBySlug, getDatasetSlugs } from '@/app/api/datasets/route'
+import { getDatasetBySlug, getDatasetSlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 import Link from 'next/link'
 
