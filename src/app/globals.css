@@ -31,3 +31,7 @@
 [class*="transition-"] {
   @apply duration-300;
 }
+
+#world-map path {
+  @apply fill-white stroke-[.5] stroke-stone-400 cursor-pointer transition-colors duration-300 hover:fill-sky-200 dark:hover:fill-sky-800 dark:fill-stone-950 dark:stroke-stone-600;
+}
