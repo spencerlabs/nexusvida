@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 
+import ArticleItem from '@/components/ArticleItem'
 import { getAllCountries } from '@/lib/api'
-import Link from 'next/link'
 
 export default function CountriesPage() {
   const countries = getAllCountries()
@@ -15,19 +15,12 @@ export default function CountriesPage() {
 
       <div className="flex flex-wrap justify-center gap-4">
         {countries.map((country) => (
-          <article key={country.slug}>
-            <h2 className="text-lg font-normal">
-              <Link
-                href={`/countries/${country.slug}`}
-                className="flex items-center rounded-xl bg-white px-3 py-1 transition-colors dark:bg-stone-950"
-              >
-                <span aria-hidden className="mr-2 text-2xl">
-                  {country.icon}
-                </span>
-                {country.title}
-              </Link>
-            </h2>
-          </article>
+          <ArticleItem key={country.slug} href={`/countries/${country.slug}`}>
+            <span aria-hidden className="mr-2 text-2xl">
+              {country.icon}
+            </span>
+            {country.title}
+          </ArticleItem>
         ))}
       </div>
     </div>

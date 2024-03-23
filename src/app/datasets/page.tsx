@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 
+import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
-import Link from 'next/link'
 
 export default function DatasetsPage() {
   const datasets = getAllDatasets()
@@ -15,16 +15,9 @@ export default function DatasetsPage() {
 
       <div className="flex flex-wrap justify-center gap-4">
         {datasets.map((dataset) => (
-          <article key={dataset.slug}>
-            <h2 className="text-lg font-normal">
-              <Link
-                href={`/datasets/${dataset.slug}`}
-                className="flex items-center rounded-xl bg-white px-3 py-1 transition-colors dark:bg-stone-950"
-              >
-                {dataset.title}
-              </Link>
-            </h2>
-          </article>
+          <ArticleItem key={dataset.slug} href={`/datasets/${dataset.slug}`}>
+            {dataset.title}
+          </ArticleItem>
         ))}
       </div>
     </div>
