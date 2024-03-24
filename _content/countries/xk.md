@@ -5,5 +5,6 @@ data:
   gpi: 70
   gdp: 153
   whr: 29
+  col: 38
 ---
 

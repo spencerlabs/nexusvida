@@ -5,6 +5,13 @@ import { getAllCountries } from '@/lib/api'
 
 export default async function Home() {
   const countries = getAllCountries()
+    .filter((c) => {
+      const { col, gdp, gpi, hdi, whr } = c.data
+
+      if (!col || !gdp || !gpi || !hdi || !whr) return false
+
+      return true
+    })
     .map((c) => {
       const dataArr = Object.values(c.data)
       const score = dataArr.reduce((sum, a) => sum + a, 0) / dataArr.length

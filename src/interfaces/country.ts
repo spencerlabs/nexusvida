@@ -1,7 +1,10 @@
 interface CountryData extends Record<string, number> {
-  gpi: number
+  col: number
+  gci: number
   gdp: number
+  gpi: number
   hdi: number
+  whr: number
 }
 
 export interface Country {

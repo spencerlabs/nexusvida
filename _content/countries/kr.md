@@ -6,4 +6,5 @@ data:
   gdp: 13
   hdi: 19
   whr: 52
+  col: 123
 ---

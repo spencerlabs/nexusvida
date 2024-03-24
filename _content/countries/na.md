@@ -6,4 +6,6 @@ data:
   gdp: 149
   hdi: 142
   whr: 106
+  col: 34
+  gci: 90
 ---
