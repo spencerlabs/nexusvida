@@ -27,7 +27,9 @@ export default async function Dataset({ params }: Params) {
   return (
     <article className="mx-auto w-full max-w-md">
       <header className="mb-8 text-center">
-        <h1 className="mb-1">{dataset.title}</h1>
+        <h1 id="table-label" className="mb-1">
+          {dataset.title}
+        </h1>
 
         <p className="text-center text-xs">
           Source ({dataset.year}):{' '}
@@ -49,6 +51,7 @@ export default async function Dataset({ params }: Params) {
       )}
 
       <Table
+        aria-labelledby="table-label"
         cols={[
           { label: 'Rank', width: '44px' },
           { label: 'Name', align: 'left' },

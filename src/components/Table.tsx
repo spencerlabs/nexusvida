@@ -1,4 +1,4 @@
-interface TableProps {
+interface TableProps extends React.ComponentPropsWithoutRef<'div'> {
   cols: {
     align?: 'left' | 'center' | 'right'
     label: string
@@ -7,40 +7,55 @@ interface TableProps {
   data: React.ReactNode[][]
 }
 
-const Table = ({ cols, data }: TableProps) => {
+const Table = ({ cols, data, ...props }: TableProps) => {
+  const gridTemplateColumns = cols.map((c) => c.width || '1fr').join(' ')
+
   return (
-    <table className="w-full select-none">
-      <thead>
-        <tr className="border-b-2 border-stone-400 text-xs font-bold uppercase dark:border-stone-600">
+    <div {...props} role="table" className="w-full select-none">
+      <div role="rowgroup" className="sticky top-12 z-10">
+        <div
+          role="row"
+          className="grid gap-2 border-b-2 border-stone-400 bg-stone-100 p-2 text-xs font-bold uppercase dark:border-stone-600 dark:bg-stone-900"
+          style={{ gridTemplateColumns }}
+        >
           {cols.map((col) => (
-            <th
+            <span
               key={col.label}
-              className="sticky top-12 z-10 bg-stone-100 p-2 dark:bg-stone-900"
+              role="columnheader"
               style={{
-                textAlign: col.align || undefined,
+                textAlign: col.align || 'center',
                 width: col.width || undefined,
               }}
             >
               {col.label}
-            </th>
+            </span>
           ))}
-        </tr>
-      </thead>
-      <tbody className="divide-y divide-stone-400 dark:divide-stone-600">
+        </div>
+      </div>
+      <div
+        role="rowgroup"
+        className="divide-y divide-stone-400 dark:divide-stone-600"
+      >
         {data?.map((item, i) => (
-          <tr
+          <div
             key={i}
-            className="relative text-lg transition-colors hover:bg-white dark:hover:bg-stone-950"
+            role="row"
+            className="relative grid gap-2 p-2 text-lg transition-colors hover:bg-white dark:hover:bg-stone-950"
+            style={{ gridTemplateColumns }}
           >
             {item.map((cell, j) => (
-              <td key={`${i}-${j}`} className="p-2">
+              <span
+                key={`${i}-${j}`}
+                role="cell"
+                style={{ textAlign: cols[j].align || 'center' }}
+              >
                 {cell}
-              </td>
+              </span>
             ))}
-          </tr>
+          </div>
         ))}
-      </tbody>
-    </table>
+      </div>
+    </div>
   )
 }
 

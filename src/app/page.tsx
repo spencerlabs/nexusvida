@@ -15,9 +15,12 @@ export default async function Home() {
 
   return (
     <div className="mx-auto w-full max-w-md">
-      <h1 className="mb-8 text-center">NexusVida Rankings</h1>
+      <h1 id="table-label" className="mb-8 text-center">
+        NexusVida Rankings
+      </h1>
 
       <Table
+        aria-labelledby="table-label"
         cols={[
           { label: 'Rank', width: '44px' },
           { label: 'Name', align: 'left' },
@@ -45,7 +48,7 @@ export default async function Home() {
               <Link
                 key={`${country.slug}-name`}
                 href={`/countries/${country.slug}`}
-                className="flex after:absolute after:inset-0 after:content-['']"
+                className="flex leading-tight after:absolute after:inset-0 after:content-['']"
               >
                 <span aria-hidden className="mr-2">
                   {country.icon}

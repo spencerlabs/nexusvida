@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
+
+export const metadata: Metadata = {
+  title: 'Datasets | NexusVida',
+}
 
 export default function DatasetsPage() {
   const datasets = getAllDatasets()

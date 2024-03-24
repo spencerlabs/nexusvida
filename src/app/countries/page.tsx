@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
 import { getAllCountries } from '@/lib/api'
+
+export const metadata: Metadata = {
+  title: 'Countries | NexusVida',
+}
 
 export default function CountriesPage() {
   const countries = getAllCountries()
