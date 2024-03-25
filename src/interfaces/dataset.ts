@@ -8,4 +8,7 @@ export interface Dataset {
   year: number
   url: string
   countries?: Country[]
+  adjustments?: {
+    excluded?: number[]
+  }
 }

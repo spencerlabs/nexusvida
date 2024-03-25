@@ -1,9 +1,11 @@
 import Link from 'next/link'
 
 import Table from '@/components/Table'
-import { getAllCountries } from '@/lib/api'
+import { getAllCountries, getAllDatasets } from '@/lib/api'
 
 export default async function Home() {
+  const datasets = getAllDatasets()
+
   const countries = getAllCountries()
     .filter((c) => {
       const { col, gdp, gpi, hdi, whr } = c.data
@@ -11,6 +13,40 @@ export default async function Home() {
       if (!col || !gdp || !gpi || !hdi || !whr) return false
 
       return true
+    })
+    .map((c) => {
+      const dataOptions = Object.keys(c.data)
+
+      const updatedData: Record<string, number> = {}
+
+      dataOptions.forEach((opt) => {
+        const startingValue = c.data[opt]
+
+        const dataset = datasets.find((d) => d.slug === opt)!
+
+        if (!dataset.adjustments || !dataset.adjustments.excluded) {
+          updatedData[opt] = startingValue
+          return
+        }
+
+        const reduction = dataset.adjustments.excluded.reduce(
+          (prev, current) => {
+            if (current > startingValue) return prev
+
+            return prev + 1
+          },
+          0,
+        )
+
+        console.log(c.title, opt, reduction)
+
+        updatedData[opt] = startingValue - reduction
+      })
+
+      return {
+        ...c,
+        data: updatedData,
+      }
     })
     .map((c) => {
       const dataArr = Object.values(c.data)
