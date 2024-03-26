@@ -45,10 +45,17 @@ export default async function Dataset({ params }: Params) {
 
       {content && (
         <div
-          className="mb-8 text-sm"
+          className="mb-4 text-sm"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       )}
+
+      <p className="mb-8 text-sm">
+        <strong>Note:</strong> NexusVida only includes countries that are
+        members of the United Nations in it&apos;s datasets. Any missing items
+        in the rankings are most likely countries or territories from the
+        original dataset that are not UN members.
+      </p>
 
       <Table
         aria-labelledby="table-label"
