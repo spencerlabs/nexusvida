@@ -7,4 +7,5 @@ data:
   hdi: 163
   whr: 124
   gci: 95
+  gfs: 130
 ---

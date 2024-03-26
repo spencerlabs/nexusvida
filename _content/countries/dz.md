@@ -8,4 +8,5 @@ data:
   whr: 85
   col: 26
   gci: 136
+  gfs: 146
 ---

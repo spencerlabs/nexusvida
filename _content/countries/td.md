@@ -6,5 +6,7 @@ data:
   gdp: 150
   hdi: 189
   whr: 113
+  col:
   gci: 148
+  gfs: 175
 ---

@@ -7,4 +7,6 @@ data:
   hdi: 19
   whr: 52
   col: 123
+  gci: 37
+  gfs: 58
 ---

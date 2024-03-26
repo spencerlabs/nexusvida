@@ -38,8 +38,6 @@ export default async function Home() {
           0,
         )
 
-        console.log(c.title, opt, reduction)
-
         updatedData[opt] = startingValue - reduction
       })
 
