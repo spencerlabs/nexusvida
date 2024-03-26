@@ -34,13 +34,23 @@ export default async function Country({ params }: Params) {
 
   return (
     <article className="mx-auto w-full max-w-4xl">
-      <header className="mb-8">
-        <h1 className="text-center">
+      <header className="mb-8 space-y-1 text-center">
+        <h1 className="">
           <span aria-hidden className="mr-2">
             {country.icon}
           </span>
           {country.title}
         </h1>
+        <p className="text-xs">
+          NexusVida API:{' '}
+          <Link
+            href={`/api/countries/${country.slug}`}
+            target="_blank"
+            className="underline hover:no-underline"
+          >
+            Raw Data
+          </Link>
+        </p>
       </header>
 
       <h2 className="sr-only">Rankings</h2>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
@@ -16,7 +17,19 @@ export default function DatasetsPage() {
   }
   return (
     <div className="mx-auto w-full max-w-4xl">
-      <h1 className="mb-8 text-center">Datasets</h1>
+      <div className="mb-8 space-y-1 text-center">
+        <h1>Datasets</h1>
+        <p className="text-xs">
+          NexusVida API:{' '}
+          <Link
+            href="/api/datasets"
+            target="_blank"
+            className="underline hover:no-underline"
+          >
+            Raw Data
+          </Link>
+        </p>
+      </div>
 
       <div className="flex flex-wrap justify-center gap-4">
         {datasets.map((dataset) => (

@@ -26,12 +26,10 @@ export default async function Dataset({ params }: Params) {
 
   return (
     <article className="mx-auto w-full max-w-md">
-      <header className="mb-8 text-center">
-        <h1 id="table-label" className="mb-1">
-          {dataset.title}
-        </h1>
+      <header className="mb-8 space-y-1 text-center">
+        <h1 id="table-label">{dataset.title}</h1>
 
-        <p className="text-center text-xs">
+        <p className="text-xs">
           Source ({dataset.year}):{' '}
           <Link
             href={dataset.url}
@@ -39,6 +37,14 @@ export default async function Dataset({ params }: Params) {
             className="underline hover:no-underline"
           >
             {dataset.source}
+          </Link>{' '}
+          | NexusVida API:{' '}
+          <Link
+            href={`/api/datasets/${dataset.slug}`}
+            target="_blank"
+            className="underline hover:no-underline"
+          >
+            Raw Data
           </Link>
         </p>
       </header>

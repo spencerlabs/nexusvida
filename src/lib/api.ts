@@ -62,16 +62,18 @@ export function getDatasetBySlug(
     return { ...data, slug: realSlug } as Dataset
   }
 
-  const countries = getAllCountries().sort((a, b) => {
-    const aVal = a.data[realSlug] as number
-    const bVal = b.data[realSlug] as number
+  const countries = getAllCountries()
+    .filter((c) => c.data[realSlug])
+    .sort((a, b) => {
+      const aVal = a.data[realSlug] as number
+      const bVal = b.data[realSlug] as number
 
-    if (aVal === bVal) return 0
-    if (!aVal) return 1
-    if (!bVal) return -1
+      if (aVal === bVal) return 0
+      if (!aVal) return 1
+      if (!bVal) return -1
 
-    return aVal < bVal ? -1 : 1
-  })
+      return aVal < bVal ? -1 : 1
+    })
 
   return { ...data, countries, slug: realSlug, content } as Dataset
 }
