@@ -66,7 +66,7 @@ export default async function Country({ params }: Params) {
             <dd>
               <Link
                 href={`/datasets/${dataset}`}
-                className="block font-medium leading-tight text-stone-700 after:absolute after:inset-0 after:content-[''] dark:text-stone-300"
+                className="block font-medium leading-tight text-stone-700 after:absolute after:inset-0 dark:text-stone-300"
               >
                 {datasets.find((d) => d.slug === dataset)!.title}
               </Link>

@@ -10,7 +10,7 @@ interface TableProps extends React.ComponentPropsWithoutRef<'div'> {
 }
 
 const Table = ({ showScore, ...props }: TableProps) => {
-  const { data } = useData()
+  const { data, sort } = useData()
 
   let gridTemplateColumns = 'max-content 1fr'
 
@@ -48,15 +48,12 @@ const Table = ({ showScore, ...props }: TableProps) => {
           )}
         </div>
       </div>
-      <div
-        role="rowgroup"
-        className="col-span-full grid grid-cols-subgrid divide-y divide-stone-400 dark:divide-stone-600"
-      >
+      <div role="rowgroup" className="col-span-full grid grid-cols-subgrid">
         {data?.map((country, i) => (
           <div
             key={country.slug}
             role="row"
-            className="relative col-span-full grid grid-cols-subgrid text-lg transition-colors hover:bg-white dark:hover:bg-stone-950"
+            className={`${i !== data.length - 1 ? 'border-b ' : ''}${country.ranking === 10 && data[i + 1].ranking !== 10 && showScore && sort.by === 'ranking' && sort.order === 'asc' ? 'border-yellow-400 dark:border-yellow-600' : 'border-stone-400 dark:border-stone-600'} relative col-span-full grid grid-cols-subgrid text-lg transition-colors hover:bg-white dark:hover:bg-stone-950`}
           >
             <div
               role="cell"
@@ -72,7 +69,7 @@ const Table = ({ showScore, ...props }: TableProps) => {
               <Link
                 key={`${country.slug}-name`}
                 href={`/countries/${country.slug}`}
-                className="flex p-2 leading-tight after:absolute after:inset-0 after:content-['']"
+                className="flex p-2 leading-tight after:absolute after:inset-0"
               >
                 <span aria-hidden className="mr-2">
                   {country.icon}
