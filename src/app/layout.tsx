@@ -6,7 +6,7 @@ import Link from 'next/link'
 const font = Work_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NexusVida',
+  title: 'NexusVida | Finding the best country through external data',
 }
 
 export default function RootLayout({

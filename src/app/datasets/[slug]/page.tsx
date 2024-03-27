@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
+import type { Metadata } from 'next'
+
 import Table from '@/components/Table'
 import { getDatasetBySlug, getDatasetSlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
@@ -10,6 +12,14 @@ import { Country } from '@/interfaces/country'
 type Params = {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const dataset = getDatasetBySlug(params.slug)
+
+  return {
+    title: `${dataset.title} | Datasets | Nexus Vida`,
   }
 }
 

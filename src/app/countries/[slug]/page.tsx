@@ -1,12 +1,22 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import type { Metadata } from 'next'
+
 import { getAllDatasets, getCountryBySlug, getCountrySlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 
 type Params = {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const country = getCountryBySlug(params.slug)
+
+  return {
+    title: `${country.title} | Countries | Nexus Vida`,
   }
 }
 
