@@ -1,57 +1,93 @@
+'use client'
+
+import Link from 'next/link'
+
+import SortButton from './SortButton'
+import { useData } from './DataProvider'
+
 interface TableProps extends React.ComponentPropsWithoutRef<'div'> {
-  cols: {
-    align?: 'left' | 'center' | 'right'
-    label: string
-    width?: string
-  }[]
-  data: React.ReactNode[][]
+  showScore?: boolean
 }
 
-const Table = ({ cols, data, ...props }: TableProps) => {
-  const gridTemplateColumns = cols.map((c) => c.width || '1fr').join(' ')
+const Table = ({ showScore, ...props }: TableProps) => {
+  const { data } = useData()
+
+  let gridTemplateColumns = 'max-content 1fr'
+
+  if (showScore) gridTemplateColumns += ' max-content'
 
   return (
-    <div {...props} role="table" className="w-full select-none">
-      <div role="rowgroup" className="sticky top-12 z-10">
+    <div
+      {...props}
+      role="table"
+      className="grid w-full select-none gap-x-2"
+      style={{ gridTemplateColumns }}
+    >
+      <div
+        role="rowgroup"
+        className="sticky top-12 z-10 col-span-full grid grid-cols-subgrid"
+      >
         <div
           role="row"
-          className="grid gap-2 border-b-2 border-stone-400 bg-stone-100 p-2 text-xs font-bold uppercase dark:border-stone-600 dark:bg-stone-900"
-          style={{ gridTemplateColumns }}
+          className="col-span-full grid grid-cols-subgrid border-b-2 border-stone-400 bg-stone-100 text-xs font-bold uppercase dark:border-stone-600 dark:bg-stone-900"
         >
-          {cols.map((col) => (
-            <span
-              key={col.label}
-              role="columnheader"
-              style={{
-                textAlign: col.align || 'center',
-                width: col.width || undefined,
-              }}
-            >
-              {col.label}
-            </span>
-          ))}
+          <div role="columnheader">
+            <SortButton className="text-left" sortByString="ranking">
+              Rank
+            </SortButton>
+          </div>
+          <div role="columnheader">
+            <SortButton className="text-center" sortByString="title">
+              Name
+            </SortButton>
+          </div>
+          {showScore && (
+            <div role="columnheader" className="p-2">
+              Score
+            </div>
+          )}
         </div>
       </div>
       <div
         role="rowgroup"
-        className="divide-y divide-stone-400 dark:divide-stone-600"
+        className="col-span-full grid grid-cols-subgrid divide-y divide-stone-400 dark:divide-stone-600"
       >
-        {data?.map((item, i) => (
+        {data?.map((country, i) => (
           <div
-            key={i}
+            key={country.slug}
             role="row"
-            className="relative grid gap-2 p-2 text-lg transition-colors hover:bg-white dark:hover:bg-stone-950"
-            style={{ gridTemplateColumns }}
+            className="relative col-span-full grid grid-cols-subgrid text-lg transition-colors hover:bg-white dark:hover:bg-stone-950"
           >
-            {item.map((cell, j) => (
-              <span
-                key={`${i}-${j}`}
-                role="cell"
-                style={{ textAlign: cols[j].align || 'center' }}
+            <div
+              role="cell"
+              className="block p-2 text-center text-sm font-bold"
+            >
+              {i > 0 && country.ranking === data[i - 1].ranking ? (
+                <span className="sr-only">{country.ranking}</span>
+              ) : (
+                country.ranking
+              )}
+            </div>
+            <div role="cell">
+              <Link
+                key={`${country.slug}-name`}
+                href={`/countries/${country.slug}`}
+                className="flex p-2 leading-tight after:absolute after:inset-0 after:content-['']"
               >
-                {cell}
-              </span>
-            ))}
+                <span aria-hidden className="mr-2">
+                  {country.icon}
+                </span>
+                <span>{country.title}</span>
+              </Link>
+            </div>
+            {showScore && (
+              <div
+                role="cell"
+                className="block p-2 text-center text-sm font-bold"
+              >
+                {country.score}
+              </div>
+            )}
           </div>
         ))}
       </div>

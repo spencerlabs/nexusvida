@@ -1,111 +1,31 @@
 import Link from 'next/link'
 
+import DataProvider from '@/components/DataProvider'
 import Table from '@/components/Table'
-import { getAllCountries, getAllDatasets } from '@/lib/api'
+import { getNexusVidaRankings } from '@/lib/api'
 
 export default async function Home() {
-  const datasets = getAllDatasets()
-
-  const countries = getAllCountries()
-    .filter((c) => {
-      const { col, gdp, gpi, hdi, whr } = c.data
-
-      if (!col || !gdp || !gpi || !hdi || !whr) return false
-
-      return true
-    })
-    .map((c) => {
-      const dataOptions = Object.keys(c.data)
-
-      const updatedData: Record<string, number> = {}
-
-      dataOptions.forEach((opt) => {
-        const startingValue = c.data[opt]
-
-        const dataset = datasets.find((d) => d.slug === opt)!
-
-        if (!dataset.adjustments || !dataset.adjustments.excluded) {
-          updatedData[opt] = startingValue
-          return
-        }
-
-        const reduction = dataset.adjustments.excluded.reduce(
-          (prev, current) => {
-            if (current > startingValue) return prev
-
-            return prev + 1
-          },
-          0,
-        )
-
-        updatedData[opt] = startingValue - reduction
-      })
-
-      return {
-        ...c,
-        data: updatedData,
-      }
-    })
-    .map((c) => {
-      const dataArr = Object.values(c.data)
-      const score = dataArr.reduce((sum, a) => sum + a, 0) / dataArr.length
-
-      return { ...c, score }
-    })
-    .sort((a, b) => (a.score < b.score ? -1 : 1))
+  const countries = getNexusVidaRankings()
 
   return (
-    <div className="mx-auto w-full max-w-md">
-      <h1 id="table-label" className="mb-8 text-center">
-        NexusVida Rankings
-      </h1>
+    <DataProvider initialData={countries}>
+      <div className="mx-auto w-full max-w-md">
+        <div className="mb-8 space-y-1 text-center">
+          <h1 id="table-label">NexusVida Rankings</h1>
+          <p className="text-xs">
+            NexusVida API:{' '}
+            <Link
+              href="/api/rankings"
+              target="_blank"
+              className="underline hover:no-underline"
+            >
+              Raw Data
+            </Link>
+          </p>
+        </div>
 
-      <Table
-        aria-labelledby="table-label"
-        cols={[
-          { label: 'Rank', width: '44px' },
-          { label: 'Name', align: 'left' },
-          { label: 'Score', width: '70px' },
-        ]}
-        data={[
-          ...countries.map((country, i) => {
-            const prevScore =
-              i === 0
-                ? 0
-                : (Math.round(countries[i - 1].score * 100) / 100).toFixed(2)
-            const score = (Math.round(country.score * 100) / 100).toFixed(2)
-
-            return [
-              <span
-                key={`${country.slug}-rank`}
-                className="block text-center text-sm font-bold"
-              >
-                {score === prevScore ? (
-                  <span className="sr-only">{i + 1}</span>
-                ) : (
-                  i + 1
-                )}
-              </span>,
-              <Link
-                key={`${country.slug}-name`}
-                href={`/countries/${country.slug}`}
-                className="flex leading-tight after:absolute after:inset-0 after:content-['']"
-              >
-                <span aria-hidden className="mr-2">
-                  {country.icon}
-                </span>
-                <span>{country.title}</span>
-              </Link>,
-              <span
-                key={`${country.slug}-score`}
-                className="block text-center text-sm font-bold"
-              >
-                {score}
-              </span>,
-            ]
-          }),
-        ]}
-      />
-    </div>
+        <Table aria-labelledby="table-label" showScore />
+      </div>
+    </DataProvider>
   )
 }

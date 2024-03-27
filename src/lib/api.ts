@@ -86,3 +86,90 @@ export function getAllDatasets() {
     .sort((dataset1, dataset2) => (dataset1.title < dataset2.title ? -1 : 1))
   return datasets
 }
+
+export function calculateScore(values: number[]) {
+  const rawScore = values.reduce((sum, a) => sum + a, 0) / values.length
+
+  return (Math.round(rawScore * 100) / 100).toFixed(2)
+}
+
+export function getNexusVidaRankings() {
+  const datasets = getAllDatasets()
+
+  const countries = getAllCountries()
+    .filter((c) => {
+      // Filter out countries that don't have all datasets
+
+      for (const data in c.data) {
+        if (!c.data[data]) return false
+      }
+
+      return true
+    })
+    .map((c) => {
+      // Adjust data for exclusions in the datasets
+
+      const dataOptions = Object.keys(c.data)
+
+      const updatedData: Record<string, number> = {}
+
+      dataOptions.forEach((opt) => {
+        const startingValue = c.data[opt]
+
+        const dataset = datasets.find((d) => d.slug === opt)!
+
+        if (!dataset.adjustments || !dataset.adjustments.excluded) {
+          updatedData[opt] = startingValue
+          return
+        }
+
+        const reduction = dataset.adjustments.excluded.reduce(
+          (prev, current) => {
+            if (current > startingValue) return prev
+
+            return prev + 1
+          },
+          0,
+        )
+
+        updatedData[opt] = startingValue - reduction
+      })
+
+      return {
+        ...c,
+        data: updatedData,
+      }
+    })
+    .map((c) => {
+      // Create the score and add it to the dataset
+      return { ...c, score: calculateScore(Object.values(c.data)) }
+    })
+    .sort((a, b) => (Number(a.score) < Number(b.score) ? -1 : 1))
+    .reduce(
+      (prev, current, i) => {
+        // Add ranking to dataset
+        let ranking = i + 1
+
+        if (i > 0 && current.score === prev[prev.length - 1].score) {
+          ranking = prev[prev.length - 1].ranking
+        }
+
+        return [
+          ...prev,
+          {
+            ...current,
+            ranking,
+          },
+        ]
+      },
+      [] as (Omit<Country, 'content'> & { score?: string; ranking: number })[],
+    )
+    .map((c) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { data, ...rest } = c
+
+      return rest
+    })
+
+  return countries
+}
