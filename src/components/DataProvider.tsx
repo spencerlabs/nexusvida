@@ -1,6 +1,12 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from 'react'
 
 import { getNexusVidaRankings } from '@/lib/api'
 import { Country } from '@/interfaces/country'
@@ -11,12 +17,16 @@ interface DataContextProps {
   setSort: React.Dispatch<
     React.SetStateAction<{ by: string; order: 'asc' | 'desc' }>
   >
+  search: string
+  setSearch: React.Dispatch<React.SetStateAction<string>>
 }
 
 const DataContext = createContext<DataContextProps>({
   data: [],
   sort: { by: 'ranking', order: 'asc' },
   setSort: () => {},
+  search: '',
+  setSearch: () => {},
 })
 
 interface DataProviderProps {
@@ -30,23 +40,31 @@ const DataProvider = ({ children, initialData }: DataProviderProps) => {
     by: 'ranking',
     order: 'asc',
   })
+  const [search, setSearch] = useState('')
 
-  useEffect(() => {
-    setData([
-      ...initialData.sort((a, b) => {
+  const sortData = useCallback(() => {
+    return [...initialData]
+      .sort((a, b) => {
         const aVal = a[sort.by as keyof Omit<Country, 'content' | 'data'>]
         const bVal = b[sort.by as keyof Omit<Country, 'content' | 'data'>]
 
         if (sort.order === 'desc') return aVal > bVal ? -1 : 1
 
         return aVal < bVal ? -1 : 1
-      }),
-    ])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sort])
+      })
+      .filter((c) => {
+        if (!search) return true
+
+        return c.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+      })
+  }, [initialData, search, sort.by, sort.order])
+
+  useEffect(() => {
+    setData(sortData())
+  }, [sortData])
 
   return (
-    <DataContext.Provider value={{ data, sort, setSort }}>
+    <DataContext.Provider value={{ data, sort, setSort, search, setSearch }}>
       {children}
     </DataContext.Provider>
   )
