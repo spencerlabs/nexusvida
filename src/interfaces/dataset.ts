@@ -6,6 +6,8 @@ export interface Dataset {
   content: string
   source: string
   year: number
+  added: string
+  updated: string
   url: string
   countries?: Country[]
   adjustments?: {

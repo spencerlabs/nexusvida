@@ -2,6 +2,8 @@
 title: World Happiness Report
 source: Wellbeing Research Centre at the University of Oxford
 year: 2024
+added: 2024-03-27
+updated: 2024-03-27
 url: https://worldhappiness.report/
 adjustments:
   excluded:

@@ -11,7 +11,7 @@ const ArticleItem = ({ children, href }: ArticleItemProps) => {
       <h2 className="text-lg font-normal">
         <Link
           href={href}
-          className="flex items-center rounded-xl bg-white px-3 py-1 transition-colors dark:bg-stone-950"
+          className="group relative flex items-center rounded-xl bg-white px-3 py-1 transition-colors dark:bg-stone-950"
         >
           {children}
         </Link>

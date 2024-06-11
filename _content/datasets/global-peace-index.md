@@ -2,6 +2,8 @@
 title: Global Peace Index
 source: Institute for Economics & Peace
 year: 2023
+added: 2024-03-27
+updated: 2024-03-27
 url: https://www.economicsandpeace.org/global-peace-index
 adjustments:
   excluded:

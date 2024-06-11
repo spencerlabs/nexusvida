@@ -2,6 +2,8 @@
 title: Democracy Index
 source: The Economist Group
 year: 2023
+added: 2024-06-11
+updated: 2024-06-11
 url: https://www.eiu.com/n/campaigns/democracy-index-2023/
 adjustments:
   excluded:

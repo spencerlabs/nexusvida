@@ -32,11 +32,39 @@ export default function DatasetsPage() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
-        {datasets.map((dataset) => (
-          <ArticleItem key={dataset.slug} href={`/datasets/${dataset.slug}`}>
-            {dataset.title}
-          </ArticleItem>
-        ))}
+        {datasets.map((dataset) => {
+          const recentlyAdded =
+            (new Date().getTime() - new Date(dataset.added).getTime()) /
+              1000 /
+              60 /
+              60 /
+              24 <
+            60
+
+          const recentlyUpdated =
+            (new Date().getTime() - new Date(dataset.updated).getTime()) /
+              1000 /
+              60 /
+              60 /
+              24 <
+            60
+
+          return (
+            <ArticleItem key={dataset.slug} href={`/datasets/${dataset.slug}`}>
+              <span className="block py-1">
+                {(recentlyAdded || recentlyUpdated) && (
+                  <span
+                    className={`${recentlyAdded ? 'bg-sky-300 dark:bg-sky-700' : 'bg-amber-300 dark:bg-amber-700'} absolute -right-1 -top-2 inline-block rounded-full px-2 text-xs font-semibold uppercase group-hover:text-stone-950 dark:group-hover:text-stone-50`}
+                  >
+                    {recentlyAdded ? 'New' : 'Updated'}
+                    <span className="sr-only">:</span>
+                  </span>
+                )}
+                {dataset.title}
+              </span>
+            </ArticleItem>
+          )
+        })}
       </div>
     </div>
   )

@@ -2,6 +2,8 @@
 title: Cost of Living
 source: Numbeo
 year: 2024
+added: 2024-03-27
+updated: 2024-03-27
 url: https://www.numbeo.com/cost-of-living/rankings_by_country.jsp
 adjustments:
   excluded:

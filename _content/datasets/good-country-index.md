@@ -2,6 +2,8 @@
 title: Good Country Index
 source: The Good Country Index
 year: 2024
+added: 2024-03-27
+updated: 2024-03-27
 url: https://index.goodcountry.org/
 adjustments:
   excluded:

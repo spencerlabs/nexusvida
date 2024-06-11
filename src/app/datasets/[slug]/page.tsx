@@ -62,10 +62,33 @@ export default async function Dataset({ params }: Params) {
         )
     : []
 
+  const recentlyAdded =
+    (new Date().getTime() - new Date(dataset.added).getTime()) /
+      1000 /
+      60 /
+      60 /
+      24 <
+    60
+  const recentlyUpdated =
+    (new Date().getTime() - new Date(dataset.updated).getTime()) /
+      1000 /
+      60 /
+      60 /
+      24 <
+    60
+
   return (
     <DataProvider initialData={countries}>
       <article className="mx-auto w-full max-w-md">
         <header className="mb-8 space-y-1 text-center">
+          {(recentlyAdded || recentlyUpdated) && (
+            <span
+              className={`${recentlyAdded ? 'bg-sky-300 dark:bg-sky-700' : 'bg-amber-300 dark:bg-amber-700'} inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase leading-none`}
+            >
+              {recentlyAdded ? 'New' : 'Updated'}
+            </span>
+          )}
+
           <h1 id="table-label">{dataset.title}</h1>
 
           <p className="text-xs">

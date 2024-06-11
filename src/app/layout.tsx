@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
-import './globals.css'
 import Link from 'next/link'
+import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
+
+import { getAllDatasets } from '@/lib/api'
+
+import './globals.css'
 
 const font = Work_Sans({ subsets: ['latin'] })
 
@@ -14,11 +18,44 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const datasets = getAllDatasets()
+
+  const recentlyAdded = datasets.filter(
+    (dataset) =>
+      (new Date().getTime() - new Date(dataset.added).getTime()) /
+        1000 /
+        60 /
+        60 /
+        24 <
+      60,
+  )
+
+  const recentlyUpdated = datasets.filter(
+    (dataset) =>
+      (new Date().getTime() - new Date(dataset.updated).getTime()) /
+        1000 /
+        60 /
+        60 /
+        24 <
+      60,
+  )
+
   return (
     <html lang="en">
       <body
         className={`${font.className} flex min-h-screen w-full flex-col bg-white text-stone-950 dark:bg-stone-950 dark:text-stone-50`}
       >
+        {(recentlyAdded || recentlyUpdated) && (
+          <Link
+            href="/datasets"
+            className={`${recentlyAdded ? 'bg-sky-300 dark:bg-sky-700' : 'bg-amber-300 dark:bg-amber-700'} flex items-center justify-center px-wrap py-1 text-sm font-semibold hover:bg-opacity-80 hover:text-stone-950 hover:dark:text-stone-50`}
+          >
+            {recentlyAdded
+              ? 'New datasets recently added'
+              : 'Datasets recently updated'}
+            <TbArrowNarrowRight aria-hidden className="ml-1 h-4 w-4" />
+          </Link>
+        )}
         <header className="sticky top-0 z-30 grid h-12 grid-cols-[1fr_max-content_1fr] items-stretch bg-white px-wrap uppercase dark:bg-stone-950">
           <nav className="flex h-full items-stretch text-sm font-bold">
             <Link href="/countries" className="flex items-center">

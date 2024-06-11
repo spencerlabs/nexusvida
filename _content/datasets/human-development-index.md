@@ -2,6 +2,8 @@
 title: Human Development Index
 source: United Nations Development Programme
 year: 2024
+added: 2024-03-27
+updated: 2024-03-27
 url: https://hdr.undp.org/content/human-development-report-2023-24
 adjustments:
   excluded:
