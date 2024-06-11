@@ -2,11 +2,11 @@
 title: Romania
 icon: 🇷🇴
 data:
-  gpi: 31
-  gdp: 44
-  hdi: 53
-  whr: 32
-  col: 63
-  gci: 41
-  gfs: 58
+  global-peace-index: 31
+  gross-domestic-product: 44
+  human-development-index: 53
+  world-happiness-report: 32
+  cost-of-living: 63
+  good-country-index: 41
+  global-freedom-score: 58
 ---

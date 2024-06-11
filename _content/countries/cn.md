@@ -2,11 +2,11 @@
 title: China
 icon: 🇨🇳
 data:
-  gpi: 80
-  gdp: 2
-  hdi: 75
-  whr: 60
-  col: 47
-  gci: 69
-  gfs: 187
+  global-peace-index: 80
+  gross-domestic-product: 2
+  human-development-index: 75
+  world-happiness-report: 60
+  cost-of-living: 47
+  good-country-index: 69
+  global-freedom-score: 187
 ---

@@ -2,11 +2,11 @@
 title: Peru
 icon: 🇵🇪
 data:
-  gpi: 104
-  gdp: 51
-  hdi: 87
-  whr: 68
-  col: 36
-  gci: 66
-  gfs: 89
+  global-peace-index: 104
+  gross-domestic-product: 51
+  human-development-index: 87
+  world-happiness-report: 68
+  cost-of-living: 36
+  good-country-index: 66
+  global-freedom-score: 89
 ---

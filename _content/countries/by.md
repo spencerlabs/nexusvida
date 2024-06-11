@@ -2,11 +2,11 @@
 title: Belarus
 icon: 🇧🇾
 data:
-  gpi: 116
-  gdp: 88
-  hdi: 69
-  whr:
-  col: 17
-  gci: 70
-  gfs: 189
+  global-peace-index: 116
+  gross-domestic-product: 88
+  human-development-index: 69
+  world-happiness-report:
+  cost-of-living: 17
+  good-country-index: 70
+  global-freedom-score: 189
 ---

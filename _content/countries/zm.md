@@ -2,12 +2,12 @@
 title: Zambia
 icon: 🇿🇲
 data:
-  gpi: 63
-  gdp: 113
-  hdi: 153
-  whr: 134
-  col: 67
-  gci: 81
-  gfs: 111
+  global-peace-index: 63
+  gross-domestic-product: 113
+  human-development-index: 153
+  world-happiness-report: 134
+  cost-of-living: 67
+  good-country-index: 81
+  global-freedom-score: 111
 ---
 

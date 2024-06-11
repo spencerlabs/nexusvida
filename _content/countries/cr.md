@@ -2,11 +2,11 @@
 title: Costa Rica
 icon: 🇨🇷
 data:
-  gpi: 39
-  gdp: 75
-  hdi: 64
-  whr: 12
-  col: 104
-  gci: 49
-  gfs: 35
+  global-peace-index: 39
+  gross-domestic-product: 75
+  human-development-index: 64
+  world-happiness-report: 12
+  cost-of-living: 104
+  good-country-index: 49
+  global-freedom-score: 35
 ---

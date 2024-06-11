@@ -2,11 +2,11 @@
 title: Djibouti
 icon: 🇩🇯
 data:
-  gpi: 112
-  gdp: 170
-  hdi: 171
-  whr:
-  col:
-  gci: 157
-  gfs: 159
+  global-peace-index: 112
+  gross-domestic-product: 170
+  human-development-index: 171
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 157
+  global-freedom-score: 159
 ---

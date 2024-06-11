@@ -2,11 +2,11 @@
 title: Argentina
 icon: 🇦🇷
 data:
-  gpi: 54
-  gdp: 24
-  hdi: 48
-  whr: 48
-  col: 19
-  gci: 63
-  gfs: 51
+  global-peace-index: 54
+  gross-domestic-product: 24
+  human-development-index: 48
+  world-happiness-report: 48
+  cost-of-living: 19
+  good-country-index: 63
+  global-freedom-score: 51
 ---

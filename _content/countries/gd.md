@@ -2,12 +2,12 @@
 title: Grenada
 icon: 🇬🇩
 data:
-  gpi:
-  gdp: 196
-  hdi: 73
-  whr:
-  col:
-  gci:
-  gfs: 44
+  global-peace-index:
+  gross-domestic-product: 196
+  human-development-index: 73
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 44
 ---
 

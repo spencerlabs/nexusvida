@@ -2,11 +2,11 @@
 title: Israel
 icon: 🇮🇱
 data:
-  gpi: 143
-  gdp: 29
-  hdi: 25
-  whr: 5
-  col: 129
-  gci: 59
-  gfs: 77
+  global-peace-index: 143
+  gross-domestic-product: 29
+  human-development-index: 25
+  world-happiness-report: 5
+  cost-of-living: 129
+  good-country-index: 59
+  global-freedom-score: 77
 ---

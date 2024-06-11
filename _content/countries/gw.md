@@ -2,12 +2,12 @@
 title: Guinea-Bissau
 icon: 🇬🇼
 data:
-  gpi: 87
-  gdp: 190
-  hdi: 179
-  whr:
-  col:
-  gci:
-  gfs: 128
+  global-peace-index: 87
+  gross-domestic-product: 190
+  human-development-index: 179
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 128
 ---
 

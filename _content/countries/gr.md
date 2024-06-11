@@ -2,11 +2,11 @@
 title: Greece
 icon: 🇬🇷
 data:
-  gpi: 60
-  gdp: 54
-  hdi: 33
-  whr: 64
-  col: 107
-  gci: 36
-  gfs: 51
+  global-peace-index: 60
+  gross-domestic-product: 54
+  human-development-index: 33
+  world-happiness-report: 64
+  cost-of-living: 107
+  good-country-index: 36
+  global-freedom-score: 51
 ---

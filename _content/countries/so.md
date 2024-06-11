@@ -2,11 +2,11 @@
 title: Somalia
 icon: 🇸🇴
 data:
-  gpi: 156
-  gdp: 152
-  hdi: 193
-  whr:
-  col: 24
-  gci:
-  gfs: 189
+  global-peace-index: 156
+  gross-domestic-product: 152
+  human-development-index: 193
+  world-happiness-report:
+  cost-of-living: 24
+  good-country-index:
+  global-freedom-score: 189
 ---

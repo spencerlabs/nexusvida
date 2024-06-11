@@ -2,11 +2,11 @@
 title: Luxembourg
 icon: 🇱🇺
 data:
-  gpi:
-  gdp: 74
-  hdi: 20
-  whr: 8
-  col: 124
-  gci: 12
-  gfs: 5
+  global-peace-index:
+  gross-domestic-product: 74
+  human-development-index: 20
+  world-happiness-report: 8
+  cost-of-living: 124
+  good-country-index: 12
+  global-freedom-score: 5
 ---

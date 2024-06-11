@@ -2,12 +2,12 @@
 title: Kazakhstan
 icon: 🇰🇿
 data:
-  gpi: 76
-  gdp: 52
-  hdi: 67
-  whr: 49
-  col: 41
-  gci: 100
-  gfs: 161
+  global-peace-index: 76
+  gross-domestic-product: 52
+  human-development-index: 67
+  world-happiness-report: 49
+  cost-of-living: 41
+  good-country-index: 100
+  global-freedom-score: 161
 ---
 

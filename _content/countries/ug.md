@@ -2,11 +2,11 @@
 title: Uganda
 icon: 🇺🇬
 data:
-  gpi: 124
-  gdp: 91
-  hdi: 159
-  whr: 117
-  col: 31
-  gci: 73
-  gfs: 142
+  global-peace-index: 124
+  gross-domestic-product: 91
+  human-development-index: 159
+  world-happiness-report: 117
+  cost-of-living: 31
+  good-country-index: 73
+  global-freedom-score: 142
 ---

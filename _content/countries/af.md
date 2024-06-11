@@ -2,11 +2,11 @@
 title: Afghanistan
 icon: 🇦🇫
 data:
-  gpi: 163
-  gdp: 141
-  hdi: 182
-  whr: 143
-  col: 5
-  gci: 162
-  gfs: 195
+  global-peace-index: 163
+  gross-domestic-product: 141
+  human-development-index: 182
+  world-happiness-report: 143
+  cost-of-living: 5
+  good-country-index: 162
+  global-freedom-score: 195
 ---

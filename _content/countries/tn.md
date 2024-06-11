@@ -2,12 +2,12 @@
 title: Tunisia
 icon: 🇹🇳
 data:
-  gpi: 81
-  gdp: 92
-  hdi: 101
-  whr: 115
-  col: 23
-  gci: 47
-  gfs: 117
+  global-peace-index: 81
+  gross-domestic-product: 92
+  human-development-index: 101
+  world-happiness-report: 115
+  cost-of-living: 23
+  good-country-index: 47
+  global-freedom-score: 117
 ---
 

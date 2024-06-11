@@ -2,11 +2,11 @@
 title: Thailand
 icon: 🇹🇭
 data:
-  gpi: 92
-  gdp: 30
-  hdi: 66
-  whr: 58
-  col: 53
-  gci: 56
-  gfs: 139
+  global-peace-index: 92
+  gross-domestic-product: 30
+  human-development-index: 66
+  world-happiness-report: 58
+  cost-of-living: 53
+  good-country-index: 56
+  global-freedom-score: 139
 ---

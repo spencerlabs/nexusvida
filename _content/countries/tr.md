@@ -2,11 +2,11 @@
 title: Turkey
 icon: 🇹🇷
 data:
-  gpi: 148
-  gdp: 17
-  hdi: 45
-  whr: 98
-  col: 45
-  gci: 53
-  gfs: 143
+  global-peace-index: 148
+  gross-domestic-product: 17
+  human-development-index: 45
+  world-happiness-report: 98
+  cost-of-living: 45
+  good-country-index: 53
+  global-freedom-score: 143
 ---

@@ -2,11 +2,11 @@
 title: Denmark
 icon: 🇩🇰
 data:
-  gpi: 2
-  gdp: 37
-  hdi: 5
-  whr: 2
-  col: 137
-  gci: 2
-  gfs: 5
+  global-peace-index: 2
+  gross-domestic-product: 37
+  human-development-index: 5
+  world-happiness-report: 2
+  cost-of-living: 137
+  good-country-index: 2
+  global-freedom-score: 5
 ---

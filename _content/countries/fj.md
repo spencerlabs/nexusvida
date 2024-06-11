@@ -2,12 +2,12 @@
 title: Fiji
 icon: 🇫🇯
 data:
-  gpi:
-  gdp: 167
-  hdi: 104
-  whr:
-  col: 51
-  gci: 88
-  gfs: 89
+  global-peace-index:
+  gross-domestic-product: 167
+  human-development-index: 104
+  world-happiness-report:
+  cost-of-living: 51
+  good-country-index: 88
+  global-freedom-score: 89
 ---
 

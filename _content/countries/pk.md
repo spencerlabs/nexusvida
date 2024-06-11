@@ -2,11 +2,11 @@
 title: Pakistan
 icon: 🇵🇰
 data:
-  gpi: 146
-  gdp: 46
-  hdi: 164
-  whr: 108
-  col: 1
-  gci: 110
-  gfs: 141
+  global-peace-index: 146
+  gross-domestic-product: 46
+  human-development-index: 164
+  world-happiness-report: 108
+  cost-of-living: 1
+  good-country-index: 110
+  global-freedom-score: 141
 ---

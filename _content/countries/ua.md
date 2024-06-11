@@ -2,11 +2,11 @@
 title: Ukraine
 icon: 🇺🇦
 data:
-  gpi: 157
-  gdp: 58
-  hdi: 100
-  whr: 105
-  col: 22
-  gci: 57
-  gfs: 120
+  global-peace-index: 157
+  gross-domestic-product: 58
+  human-development-index: 100
+  world-happiness-report: 105
+  cost-of-living: 22
+  good-country-index: 57
+  global-freedom-score: 120
 ---

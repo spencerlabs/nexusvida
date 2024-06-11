@@ -2,11 +2,11 @@
 title: Oman
 icon: 🇴🇲
 data:
-  gpi: 48
-  gdp: 68
-  hdi: 59
-  whr:
-  col: 82
-  gci: 131
-  gfs: 159
+  global-peace-index: 48
+  gross-domestic-product: 68
+  human-development-index: 59
+  world-happiness-report:
+  cost-of-living: 82
+  good-country-index: 131
+  global-freedom-score: 159
 ---

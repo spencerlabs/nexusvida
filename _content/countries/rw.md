@@ -2,11 +2,11 @@
 title: Rwanda
 icon: 🇷🇼
 data:
-  gpi: 89
-  gdp: 145
-  hdi: 161
-  whr:
-  col: 12
-  gci: 71
-  gfs: 161
+  global-peace-index: 89
+  gross-domestic-product: 145
+  human-development-index: 161
+  world-happiness-report:
+  cost-of-living: 12
+  good-country-index: 71
+  global-freedom-score: 161
 ---

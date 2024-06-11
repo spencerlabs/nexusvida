@@ -2,12 +2,12 @@
 title: Palau
 icon: 🇵🇼
 data:
-  gpi:
-  gdp: 209
-  hdi: 71
-  whr:
-  col:
-  gci:
-  gfs: 30
+  global-peace-index:
+  gross-domestic-product: 209
+  human-development-index: 71
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 30
 ---
 

@@ -2,11 +2,11 @@
 title: Singapore
 icon: 🇸🇬
 data:
-  gpi: 6
-  gdp: 32
-  hdi: 9
-  whr: 30
-  col: 140
-  gci: 25
-  gfs: 122
+  global-peace-index: 6
+  gross-domestic-product: 32
+  human-development-index: 9
+  world-happiness-report: 30
+  cost-of-living: 140
+  good-country-index: 25
+  global-freedom-score: 122
 ---

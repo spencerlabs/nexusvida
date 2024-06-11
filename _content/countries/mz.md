@@ -2,11 +2,11 @@
 title: Mozambique
 icon: 🇲🇿
 data:
-  gpi: 118
-  gdp: 121
-  hdi: 183
-  whr: 90
-  col: 75
-  gci: 117
-  gfs: 125
+  global-peace-index: 118
+  gross-domestic-product: 121
+  human-development-index: 183
+  world-happiness-report: 90
+  cost-of-living: 75
+  good-country-index: 117
+  global-freedom-score: 125
 ---

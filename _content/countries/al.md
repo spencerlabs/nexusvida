@@ -2,11 +2,11 @@
 title: Albania
 icon: 🇦🇱
 data:
-  gpi: 40
-  gdp: 120
-  hdi: 74
-  whr: 87
-  col: 70
-  gci: 64
-  gfs: 84
+  global-peace-index: 40
+  gross-domestic-product: 120
+  human-development-index: 74
+  world-happiness-report: 87
+  cost-of-living: 70
+  good-country-index: 64
+  global-freedom-score: 84
 ---

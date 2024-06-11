@@ -2,11 +2,11 @@
 title: United Kingdom
 icon: 🇬🇧
 data:
-  gpi: 37
-  gdp: 6
-  hdi: 15
-  whr: 20
-  col: 120
-  gci: 14
-  gfs: 35
+  global-peace-index: 37
+  gross-domestic-product: 6
+  human-development-index: 15
+  world-happiness-report: 20
+  cost-of-living: 120
+  good-country-index: 14
+  global-freedom-score: 35
 ---

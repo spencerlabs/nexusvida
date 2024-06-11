@@ -2,11 +2,11 @@
 title: Slovenia
 icon: 🇸🇮
 data:
-  gpi: 8
-  gdp: 89
-  hdi: 22
-  whr: 21
-  col: 97
-  gci: 17
-  gfs: 11
+  global-peace-index: 8
+  gross-domestic-product: 89
+  human-development-index: 22
+  world-happiness-report: 21
+  cost-of-living: 97
+  good-country-index: 17
+  global-freedom-score: 11
 ---

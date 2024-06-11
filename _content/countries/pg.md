@@ -2,11 +2,11 @@
 title: Papua New Guinea
 icon: 🇵🇬
 data:
-  gpi: 98
-  gdp: 108
-  hdi: 154
-  whr:
-  col:
-  gci: 154
-  gfs: 100
+  global-peace-index: 98
+  gross-domestic-product: 108
+  human-development-index: 154
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 154
+  global-freedom-score: 100
 ---

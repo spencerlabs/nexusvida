@@ -2,12 +2,12 @@
 title: Armenia
 icon: 🇦🇲
 data:
-  gpi: 66
-  gdp: 118
-  hdi: 76
-  whr: 82
-  col: 60
-  gci: 43
-  gfs: 111
+  global-peace-index: 66
+  gross-domestic-product: 118
+  human-development-index: 76
+  world-happiness-report: 82
+  cost-of-living: 60
+  good-country-index: 43
+  global-freedom-score: 111
 ---
 

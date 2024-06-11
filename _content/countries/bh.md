@@ -2,11 +2,11 @@
 title: Bahrain
 icon: 🇧🇭
 data:
-  gpi: 108
-  gdp: 97
-  hdi: 34
-  whr: 62
-  col: 106
-  gci: 145
-  gfs: 181
+  global-peace-index: 108
+  gross-domestic-product: 97
+  human-development-index: 34
+  world-happiness-report: 62
+  cost-of-living: 106
+  good-country-index: 145
+  global-freedom-score: 181
 ---

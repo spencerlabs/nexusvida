@@ -2,11 +2,11 @@
 title: Iraq
 icon: 🇮🇶
 data:
-  gpi: 154
-  gdp: 49
-  hdi: 128
-  whr: 92
-  col: 30
-  gci: 164
-  gfs: 147
+  global-peace-index: 154
+  gross-domestic-product: 49
+  human-development-index: 128
+  world-happiness-report: 92
+  cost-of-living: 30
+  good-country-index: 164
+  global-freedom-score: 147
 ---

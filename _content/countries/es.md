@@ -2,11 +2,11 @@
 title: Spain
 icon: 🇪🇸
 data:
-  gpi: 32
-  gdp: 15
-  hdi: 27
-  whr: 36
-  col: 94
-  gci: 13
-  gfs: 38
+  global-peace-index: 32
+  gross-domestic-product: 15
+  human-development-index: 27
+  world-happiness-report: 36
+  cost-of-living: 94
+  good-country-index: 13
+  global-freedom-score: 38
 ---

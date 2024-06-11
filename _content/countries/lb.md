@@ -2,11 +2,11 @@
 title: Lebanon
 icon: 🇱🇧
 data:
-  gpi: 135
-  gdp: 103
-  hdi: 109
-  whr: 142
-  col: 86
-  gci: 82
-  gfs: 130
+  global-peace-index: 135
+  gross-domestic-product: 103
+  human-development-index: 109
+  world-happiness-report: 142
+  cost-of-living: 86
+  good-country-index: 82
+  global-freedom-score: 130
 ---

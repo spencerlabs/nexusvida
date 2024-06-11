@@ -2,12 +2,12 @@
 title: Monaco
 icon: 🇲🇨
 data:
-  gpi:
-  gdp: 158
-  hdi:
-  whr:
-  col:
-  gci:
-  gfs: 63
+  global-peace-index:
+  gross-domestic-product: 158
+  human-development-index:
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 63
 ---
 

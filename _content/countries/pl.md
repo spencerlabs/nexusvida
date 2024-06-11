@@ -2,11 +2,11 @@
 title: Poland
 icon: 🇵🇱
 data:
-  gpi: 29
-  gdp: 21
-  hdi: 36
-  whr: 35
-  col: 73
-  gci: 27
-  gfs: 67
+  global-peace-index: 29
+  gross-domestic-product: 21
+  human-development-index: 36
+  world-happiness-report: 35
+  cost-of-living: 73
+  good-country-index: 27
+  global-freedom-score: 67
 ---

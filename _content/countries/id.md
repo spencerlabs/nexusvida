@@ -2,11 +2,11 @@
 title: Indonesia
 icon: 🇮🇩
 data:
-  gpi: 53
-  gdp: 16
-  hdi: 112
-  whr: 80
-  col: 21
-  gci: 83
-  gfs: 109
+  global-peace-index: 53
+  gross-domestic-product: 16
+  human-development-index: 112
+  world-happiness-report: 80
+  cost-of-living: 21
+  good-country-index: 83
+  global-freedom-score: 109
 ---

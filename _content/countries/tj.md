@@ -2,11 +2,11 @@
 title: Tajikistan
 icon: 🇹🇯
 data:
-  gpi: 102
-  gdp: 151
-  hdi: 126
-  whr: 88
-  col:
-  gci: 97
-  gfs: 197
+  global-peace-index: 102
+  gross-domestic-product: 151
+  human-development-index: 126
+  world-happiness-report: 88
+  cost-of-living:
+  good-country-index: 97
+  global-freedom-score: 197
 ---

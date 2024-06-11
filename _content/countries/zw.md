@@ -2,11 +2,11 @@
 title: Zimbabwe
 icon: 🇿🇼
 data:
-  gpi: 125
-  gdp: 106
-  hdi: 159
-  whr: 138
-  col: 54
-  gci: 86
-  gfs: 153
+  global-peace-index: 125
+  gross-domestic-product: 106
+  human-development-index: 159
+  world-happiness-report: 138
+  cost-of-living: 54
+  good-country-index: 86
+  global-freedom-score: 153
 ---

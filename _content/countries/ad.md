@@ -2,12 +2,12 @@
 title: Andorra
 icon: 🇦🇩
 data:
-  gpi:
-  gdp: 172
-  hdi: 35
-  whr:
-  col:
-  gci:
-  gfs: 24
+  global-peace-index:
+  gross-domestic-product: 172
+  human-development-index: 35
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 24
 ---
 

@@ -2,11 +2,11 @@
 title: Sweden
 icon: 🇸🇪
 data:
-  gpi: 28
-  gdp: 25
-  hdi: 5
-  whr: 4
-  col: 117
-  gci: 1
-  gfs: 2
+  global-peace-index: 28
+  gross-domestic-product: 25
+  human-development-index: 5
+  world-happiness-report: 4
+  cost-of-living: 117
+  good-country-index: 1
+  global-freedom-score: 2
 ---

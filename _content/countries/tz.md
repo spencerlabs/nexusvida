@@ -2,11 +2,11 @@
 title: Tanzania
 icon: 🇹🇿
 data:
-  gpi: 91
-  gdp: 76
-  hdi: 167
-  whr: 131
-  col: 10
-  gci: 85
-  gfs: 139
+  global-peace-index: 91
+  gross-domestic-product: 76
+  human-development-index: 167
+  world-happiness-report: 131
+  cost-of-living: 10
+  good-country-index: 85
+  global-freedom-score: 139
 ---

@@ -2,12 +2,12 @@
 title: Trinidad and Tobago
 icon: 🇹🇹
 data:
-  gpi: 72
-  gdp: 114
-  hdi: 60
-  whr:
-  col: 105
-  gci: 99
-  gfs: 63
+  global-peace-index: 72
+  gross-domestic-product: 114
+  human-development-index: 60
+  world-happiness-report:
+  cost-of-living: 105
+  good-country-index: 99
+  global-freedom-score: 63
 ---
 

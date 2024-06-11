@@ -2,11 +2,11 @@
 title: Lesotho
 icon: 🇱🇸
 data:
-  gpi: 111
-  gdp: 184
-  hdi: 168
-  whr: 141
-  col:
-  gci: 112
-  gfs: 89
+  global-peace-index: 111
+  gross-domestic-product: 184
+  human-development-index: 168
+  world-happiness-report: 141
+  cost-of-living:
+  good-country-index: 112
+  global-freedom-score: 89
 ---

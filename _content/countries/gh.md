@@ -2,11 +2,11 @@
 title: Ghana
 icon: 🇬🇭
 data:
-  gpi: 51
-  gdp: 83
-  hdi: 145
-  whr: 120
-  col: 11
-  gci: 84
-  gfs: 67
+  global-peace-index: 51
+  gross-domestic-product: 83
+  human-development-index: 145
+  world-happiness-report: 120
+  cost-of-living: 11
+  good-country-index: 84
+  global-freedom-score: 67
 ---

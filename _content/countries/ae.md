@@ -2,12 +2,12 @@
 title: United Arab Emirates
 icon: 🇦🇪
 data:
-  gpi: 75
-  gdp: 31
-  hdi: 17
-  whr: 22
-  col: 114
-  gci: 65
-  gfs: 169
+  global-peace-index: 75
+  gross-domestic-product: 31
+  human-development-index: 17
+  world-happiness-report: 22
+  cost-of-living: 114
+  good-country-index: 65
+  global-freedom-score: 169
 ---
 

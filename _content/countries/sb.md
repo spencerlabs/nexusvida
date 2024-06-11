@@ -2,12 +2,12 @@
 title: Solomon Islands
 icon: 🇸🇧
 data:
-  gpi:
-  gdp: 192
-  hdi: 156
-  whr:
-  col:
-  gci:
-  gfs: 76
+  global-peace-index:
+  gross-domestic-product: 192
+  human-development-index: 156
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 76
 ---
 

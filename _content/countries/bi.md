@@ -2,11 +2,11 @@
 title: Burundi
 icon: 🇧🇮
 data:
-  gpi: 128
-  gdp: 177
-  hdi: 187
-  whr:
-  col:
-  gci: 139
-  gfs: 178
+  global-peace-index: 128
+  gross-domestic-product: 177
+  human-development-index: 187
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 139
+  global-freedom-score: 178
 ---

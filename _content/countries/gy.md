@@ -2,11 +2,11 @@
 title: Guyana
 icon: 🇬🇾
 data:
-  gpi: 106
-  gdp: 136
-  hdi: 95
-  whr:
-  col: 85
-  gci: 77
-  gfs: 78
+  global-peace-index: 106
+  gross-domestic-product: 136
+  human-development-index: 95
+  world-happiness-report:
+  cost-of-living: 85
+  good-country-index: 77
+  global-freedom-score: 78
 ---

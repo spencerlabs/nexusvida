@@ -2,12 +2,12 @@
 title: Tonga
 icon: 🇹🇴
 data:
-  gpi:
-  gdp: 204
-  hdi: 98
-  whr:
-  col:
-  gci: 141
-  gfs: 66
+  global-peace-index:
+  gross-domestic-product: 204
+  human-development-index: 98
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 141
+  global-freedom-score: 66
 ---
 

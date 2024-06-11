@@ -2,11 +2,11 @@
 title: Libya
 icon: 🇱🇾
 data:
-  gpi: 137
-  gdp: 101
-  hdi: 92
-  whr: 66
-  col: 3
-  gci: 166
-  gfs: 187
+  global-peace-index: 137
+  gross-domestic-product: 101
+  human-development-index: 92
+  world-happiness-report: 66
+  cost-of-living: 3
+  good-country-index: 166
+  global-freedom-score: 187
 ---

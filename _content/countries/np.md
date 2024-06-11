@@ -2,12 +2,12 @@
 title: Nepal
 icon: 🇳🇵
 data:
-  gpi: 79
-  gdp: 100
-  hdi: 146
-  whr: 93
-  col: 13
-  gci: 74
-  gfs: 99
+  global-peace-index: 79
+  gross-domestic-product: 100
+  human-development-index: 146
+  world-happiness-report: 93
+  cost-of-living: 13
+  good-country-index: 74
+  global-freedom-score: 99
 ---
 

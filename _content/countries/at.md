@@ -2,11 +2,11 @@
 title: Austria
 icon: 🇦🇹
 data:
-  gpi: 5
-  gdp: 28
-  hdi: 22
-  whr: 14
-  col: 128
-  gci: 10
-  gfs: 24
+  global-peace-index: 5
+  gross-domestic-product: 28
+  human-development-index: 22
+  world-happiness-report: 14
+  cost-of-living: 128
+  good-country-index: 10
+  global-freedom-score: 24
 ---

@@ -2,11 +2,11 @@
 title: Burkina Faso
 icon: 🇧🇫
 data:
-  gpi: 150
-  gdp: 124
-  hdi: 185
-  whr: 110
-  col:
-  gci: 121
-  gfs: 153
+  global-peace-index: 150
+  gross-domestic-product: 124
+  human-development-index: 185
+  world-happiness-report: 110
+  cost-of-living:
+  good-country-index: 121
+  global-freedom-score: 153
 ---

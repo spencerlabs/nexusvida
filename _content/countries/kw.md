@@ -2,11 +2,11 @@
 title: Kuwait
 icon: 🇰🇼
 data:
-  gpi: 35
-  gdp: 59
-  hdi: 49
-  whr: 13
-  col: 78
-  gci: 123
-  gfs: 137
+  global-peace-index: 35
+  gross-domestic-product: 59
+  human-development-index: 49
+  world-happiness-report: 13
+  cost-of-living: 78
+  good-country-index: 123
+  global-freedom-score: 137
 ---

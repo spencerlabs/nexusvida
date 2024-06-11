@@ -2,11 +2,11 @@
 title: Switzerland
 icon: 🇨🇭
 data:
-  gpi: 10
-  gdp: 20
-  hdi: 1
-  whr: 9
-  col: 145
-  gci: 15
-  gfs: 11
+  global-peace-index: 10
+  gross-domestic-product: 20
+  human-development-index: 1
+  world-happiness-report: 9
+  cost-of-living: 145
+  good-country-index: 15
+  global-freedom-score: 11
 ---

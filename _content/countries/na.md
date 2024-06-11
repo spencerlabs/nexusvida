@@ -2,11 +2,11 @@
 title: Namibia
 icon: 🇳🇦
 data:
-  gpi: 56
-  gdp: 149
-  hdi: 142
-  whr: 106
-  col: 34
-  gci: 90
-  gfs: 74
+  global-peace-index: 56
+  gross-domestic-product: 149
+  human-development-index: 142
+  world-happiness-report: 106
+  cost-of-living: 34
+  good-country-index: 90
+  global-freedom-score: 74
 ---

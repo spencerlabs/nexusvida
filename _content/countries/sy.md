@@ -2,11 +2,11 @@
 title: Syria
 icon: 🇸🇾
 data:
-  gpi: 161
-  gdp: 128
-  hdi: 157
-  whr:
-  col: 8
-  gci: 169
-  gfs: 206
+  global-peace-index: 161
+  gross-domestic-product: 128
+  human-development-index: 157
+  world-happiness-report:
+  cost-of-living: 8
+  good-country-index: 169
+  global-freedom-score: 206
 ---

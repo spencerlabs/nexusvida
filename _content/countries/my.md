@@ -2,11 +2,11 @@
 title: Malaysia
 icon: 🇲🇾
 data:
-  gpi: 19
-  gdp: 36
-  hdi: 63
-  whr: 59
-  col: 32
-  gci: 48
-  gfs: 114
+  global-peace-index: 19
+  gross-domestic-product: 36
+  human-development-index: 63
+  world-happiness-report: 59
+  cost-of-living: 32
+  good-country-index: 48
+  global-freedom-score: 114
 ---

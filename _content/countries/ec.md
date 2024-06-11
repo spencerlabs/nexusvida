@@ -2,11 +2,11 @@
 title: Ecuador
 icon: 🇪🇨
 data:
-  gpi: 97
-  gdp: 65
-  hdi: 83
-  whr: 74
-  col: 42
-  gci: 92
-  gfs: 86
+  global-peace-index: 97
+  gross-domestic-product: 65
+  human-development-index: 83
+  world-happiness-report: 74
+  cost-of-living: 42
+  good-country-index: 92
+  global-freedom-score: 86
 ---

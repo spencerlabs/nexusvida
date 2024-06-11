@@ -2,11 +2,11 @@
 title: Algeria
 icon: 🇩🇿
 data:
-  gpi: 96
-  gdp: 56
-  hdi: 93
-  whr: 85
-  col: 26
-  gci: 136
-  gfs: 146
+  global-peace-index: 96
+  gross-domestic-product: 56
+  human-development-index: 93
+  world-happiness-report: 85
+  cost-of-living: 26
+  good-country-index: 136
+  global-freedom-score: 146
 ---

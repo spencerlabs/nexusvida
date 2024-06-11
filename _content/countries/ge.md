@@ -2,11 +2,11 @@
 title: Georgia
 icon: 🇬🇪
 data:
-  gpi: 94
-  gdp: 112
-  hdi: 60
-  whr: 91
-  col: 55
-  gci: 51
-  gfs: 106
+  global-peace-index: 94
+  gross-domestic-product: 112
+  human-development-index: 60
+  world-happiness-report: 91
+  cost-of-living: 55
+  good-country-index: 51
+  global-freedom-score: 106
 ---

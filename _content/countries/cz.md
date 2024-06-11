@@ -2,11 +2,11 @@
 title: Czechia
 icon: 🇨🇿
 data:
-  gpi: 12
-  gdp: 47
-  hdi: 32
-  whr: 18
-  col: 95
-  gci: 28
-  gfs: 19
+  global-peace-index: 12
+  gross-domestic-product: 47
+  human-development-index: 32
+  world-happiness-report: 18
+  cost-of-living: 95
+  good-country-index: 28
+  global-freedom-score: 19
 ---

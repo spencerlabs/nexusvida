@@ -2,11 +2,11 @@
 title: Samoa
 icon: 🇼🇸
 data:
-  gpi:
-  gdp: 201
-  hdi: 116
-  whr:
-  col:
-  gci: 126
-  gfs: 55
+  global-peace-index:
+  gross-domestic-product: 201
+  human-development-index: 116
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 126
+  global-freedom-score: 55
 ---

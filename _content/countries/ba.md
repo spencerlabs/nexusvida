@@ -2,12 +2,12 @@
 title: Bosnia and Herzegovina
 icon: 🇧🇦
 data:
-  gpi: 61
-  gdp: 115
-  hdi: 80
-  whr: 65
-  col: 50
-  gci: 50
-  gfs: 117
+  global-peace-index: 61
+  gross-domestic-product: 115
+  human-development-index: 80
+  world-happiness-report: 65
+  cost-of-living: 50
+  good-country-index: 50
+  global-freedom-score: 117
 ---
 

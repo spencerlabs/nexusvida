@@ -2,11 +2,11 @@
 title: Mauritius
 icon: 🇲🇺
 data:
-  gpi: 23
-  gdp: 142
-  hdi: 72
-  whr: 70
-  col: 68
-  gci: 58
-  gfs: 51
+  global-peace-index: 23
+  gross-domestic-product: 142
+  human-development-index: 72
+  world-happiness-report: 70
+  cost-of-living: 68
+  good-country-index: 58
+  global-freedom-score: 51
 ---

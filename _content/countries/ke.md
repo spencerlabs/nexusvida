@@ -2,11 +2,11 @@
 title: Kenya
 icon: 🇰🇪
 data:
-  gpi: 117
-  gdp: 67
-  hdi: 146
-  whr: 114
-  col: 6
-  gci: 72
-  gfs: 116
+  global-peace-index: 117
+  gross-domestic-product: 67
+  human-development-index: 146
+  world-happiness-report: 114
+  cost-of-living: 6
+  good-country-index: 72
+  global-freedom-score: 116
 ---

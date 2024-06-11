@@ -2,12 +2,12 @@
 title: Uzbekistan
 icon: 🇺🇿
 data:
-  gpi: 86
-  gdp: 73
-  hdi: 106
-  whr: 47
-  col: 16
-  gci: 163
-  gfs: 181
+  global-peace-index: 86
+  gross-domestic-product: 73
+  human-development-index: 106
+  world-happiness-report: 47
+  cost-of-living: 16
+  good-country-index: 163
+  global-freedom-score: 181
 ---
 

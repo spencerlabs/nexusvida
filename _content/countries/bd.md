@@ -2,11 +2,11 @@
 title: Bangladesh
 icon: 🇧🇩
 data:
-  gpi: 88
-  gdp: 33
-  hdi: 129
-  whr: 129
-  col: 7
-  gci: 105
-  gfs: 134
+  global-peace-index: 88
+  gross-domestic-product: 33
+  human-development-index: 129
+  world-happiness-report: 129
+  cost-of-living: 7
+  good-country-index: 105
+  global-freedom-score: 134
 ---

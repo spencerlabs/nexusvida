@@ -2,11 +2,11 @@
 title: Iceland
 icon: 🇮🇸
 data:
-  gpi: 1
-  gdp: 111
-  hdi: 3
-  whr: 3
-  col: 141
-  gci: 20
-  gfs: 19
+  global-peace-index: 1
+  gross-domestic-product: 111
+  human-development-index: 3
+  world-happiness-report: 3
+  cost-of-living: 141
+  good-country-index: 20
+  global-freedom-score: 19
 ---

@@ -2,11 +2,11 @@
 title: Saudi Arabia
 icon: 🇸🇦
 data:
-  gpi: 119
-  gdp: 19
-  hdi: 40
-  whr: 28
-  col: 90
-  gci: 114
-  gfs: 189
+  global-peace-index: 119
+  gross-domestic-product: 19
+  human-development-index: 40
+  world-happiness-report: 28
+  cost-of-living: 90
+  good-country-index: 114
+  global-freedom-score: 189
 ---

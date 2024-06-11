@@ -2,12 +2,12 @@
 title: Cameroon
 icon: 🇨🇲
 data:
-  gpi: 139
-  gdp: 94
-  hdi: 151
-  whr: 104
-  col: 66
-  gci: 119
-  gfs: 175
+  global-peace-index: 139
+  gross-domestic-product: 94
+  human-development-index: 151
+  world-happiness-report: 104
+  cost-of-living: 66
+  good-country-index: 119
+  global-freedom-score: 175
 ---
 

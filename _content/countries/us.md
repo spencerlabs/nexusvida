@@ -2,11 +2,11 @@
 title: United States of America
 icon: 🇺🇸
 data:
-  gpi: 131
-  gdp: 1
-  hdi: 20
-  whr: 23
-  col: 135
-  gci: 46
-  gfs: 58
+  global-peace-index: 131
+  gross-domestic-product: 1
+  human-development-index: 20
+  world-happiness-report: 23
+  cost-of-living: 135
+  good-country-index: 46
+  global-freedom-score: 58
 ---

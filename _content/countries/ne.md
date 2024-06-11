@@ -2,10 +2,10 @@
 title: Niger
 icon: 🇳🇪
 data:
-  gpi: 138
-  gdp: 134
-  hdi: 189
-  whr: 109
-  gci: 143
-  gfs: 143
+  global-peace-index: 138
+  gross-domestic-product: 134
+  human-development-index: 189
+  world-happiness-report: 109
+  good-country-index: 143
+  global-freedom-score: 143
 ---

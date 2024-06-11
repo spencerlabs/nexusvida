@@ -2,12 +2,12 @@
 title: Marshall Islands
 icon: 🇲🇭
 data:
-  gpi:
-  gdp: 208
-  hdi: 102
-  whr:
-  col:
-  gci:
-  gfs: 24
+  global-peace-index:
+  gross-domestic-product: 208
+  human-development-index: 102
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 24
 ---
 

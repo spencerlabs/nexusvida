@@ -2,11 +2,11 @@
 title: Madagascar
 icon: 🇲🇬
 data:
-  gpi: 55
-  gdp: 139
-  hdi: 177
-  whr: 123
-  col: 9
-  gci: 89
-  gfs: 106
+  global-peace-index: 55
+  gross-domestic-product: 139
+  human-development-index: 177
+  world-happiness-report: 123
+  cost-of-living: 9
+  good-country-index: 89
+  global-freedom-score: 106
 ---

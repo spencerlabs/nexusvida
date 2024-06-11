@@ -2,11 +2,11 @@
 title: Central African Republic
 icon: 🇨🇫
 data:
-  gpi: 152
-  gdp: 178
-  hdi: 191
-  whr:
-  col:
-  gci: 167
-  gfs: 197
+  global-peace-index: 152
+  gross-domestic-product: 178
+  human-development-index: 191
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 167
+  global-freedom-score: 197
 ---

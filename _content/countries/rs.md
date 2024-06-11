@@ -2,12 +2,12 @@
 title: Serbia
 icon: 🇷🇸
 data:
-  gpi: 65
-  gdp: 85
-  hdi: 65
-  whr: 37
-  col: 58
-  gci: 38
-  gfs: 109
+  global-peace-index: 65
+  gross-domestic-product: 85
+  human-development-index: 65
+  world-happiness-report: 37
+  cost-of-living: 58
+  good-country-index: 38
+  global-freedom-score: 109
 ---
 

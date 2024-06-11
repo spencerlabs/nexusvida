@@ -2,11 +2,11 @@
 title: Chad
 icon: 🇹🇩
 data:
-  gpi: 142
-  gdp: 150
-  hdi: 189
-  whr: 113
-  col:
-  gci: 148
-  gfs: 175
+  global-peace-index: 142
+  gross-domestic-product: 150
+  human-development-index: 189
+  world-happiness-report: 113
+  cost-of-living:
+  good-country-index: 148
+  global-freedom-score: 175
 ---

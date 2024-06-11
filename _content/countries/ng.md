@@ -2,11 +2,11 @@
 title: Nigeria
 icon: 🇳🇬
 data:
-  gpi: 144
-  gdp: 39
-  hdi: 161
-  whr: 102
-  col: 2
-  gci: 140
-  gfs: 125
+  global-peace-index: 144
+  gross-domestic-product: 39
+  human-development-index: 161
+  world-happiness-report: 102
+  cost-of-living: 2
+  good-country-index: 140
+  global-freedom-score: 125
 ---

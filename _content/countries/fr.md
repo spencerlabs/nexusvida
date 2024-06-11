@@ -2,11 +2,11 @@
 title: France
 icon: 🇫🇷
 data:
-  gpi: 67
-  gdp: 7
-  hdi: 28
-  whr: 27
-  col: 126
-  gci: 9
-  gfs: 44
+  global-peace-index: 67
+  gross-domestic-product: 7
+  human-development-index: 28
+  world-happiness-report: 27
+  cost-of-living: 126
+  good-country-index: 9
+  global-freedom-score: 44
 ---

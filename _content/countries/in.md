@@ -2,11 +2,11 @@
 title: India
 icon: 🇮🇳
 data:
-  gpi: 126
-  gdp: 5
-  hdi: 134
-  whr: 126
-  col: 4
-  gci: 52
-  gfs: 89
+  global-peace-index: 126
+  gross-domestic-product: 5
+  human-development-index: 134
+  world-happiness-report: 126
+  cost-of-living: 4
+  good-country-index: 52
+  global-freedom-score: 89
 ---

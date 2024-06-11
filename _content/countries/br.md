@@ -2,11 +2,11 @@
 title: Brazil
 icon: 🇧🇷
 data:
-  gpi: 132
-  gdp: 9
-  hdi: 89
-  whr: 44
-  col: 52
-  gci: 62
-  gfs: 79
+  global-peace-index: 132
+  gross-domestic-product: 9
+  human-development-index: 89
+  world-happiness-report: 44
+  cost-of-living: 52
+  good-country-index: 62
+  global-freedom-score: 79
 ---

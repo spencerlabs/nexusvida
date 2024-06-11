@@ -2,11 +2,11 @@
 title: Uruguay
 icon: 🇺🇾
 data:
-  gpi: 50
-  gdp: 84
-  hdi: 52
-  whr: 26
-  col: 110
-  gci: 45
-  gfs: 11
+  global-peace-index: 50
+  gross-domestic-product: 84
+  human-development-index: 52
+  world-happiness-report: 26
+  cost-of-living: 110
+  good-country-index: 45
+  global-freedom-score: 11
 ---

@@ -2,12 +2,12 @@
 title: Malta
 icon: 🇲🇹
 data:
-  gpi:
-  gdp: 126
-  hdi: 25
-  whr: 40
-  col: 109
-  gci: 31
-  gfs: 49
+  global-peace-index:
+  gross-domestic-product: 126
+  human-development-index: 25
+  world-happiness-report: 40
+  cost-of-living: 109
+  good-country-index: 31
+  global-freedom-score: 49
 ---
 

@@ -2,11 +2,11 @@
 title: Italy
 icon: 🇮🇹
 data:
-  gpi: 34
-  gdp: 8
-  hdi: 30
-  whr: 41
-  col: 115
-  gci: 24
-  gfs: 38
+  global-peace-index: 34
+  gross-domestic-product: 8
+  human-development-index: 30
+  world-happiness-report: 41
+  cost-of-living: 115
+  good-country-index: 24
+  global-freedom-score: 38
 ---

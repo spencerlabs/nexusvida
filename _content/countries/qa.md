@@ -2,11 +2,11 @@
 title: Qatar
 icon: 🇶🇦
 data:
-  gpi: 21
-  gdp: 55
-  hdi: 40
-  whr:
-  col: 108
-  gci: 109
-  gfs: 158
+  global-peace-index: 21
+  gross-domestic-product: 55
+  human-development-index: 40
+  world-happiness-report:
+  cost-of-living: 108
+  good-country-index: 109
+  global-freedom-score: 158
 ---

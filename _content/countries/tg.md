@@ -2,10 +2,10 @@
 title: Togo
 icon: 🇹🇬
 data:
-  gpi: 105
-  gdp: 157
-  hdi: 163
-  whr: 124
-  gci: 95
-  gfs: 130
+  global-peace-index: 105
+  gross-domestic-product: 157
+  human-development-index: 163
+  world-happiness-report: 124
+  good-country-index: 95
+  global-freedom-score: 130
 ---

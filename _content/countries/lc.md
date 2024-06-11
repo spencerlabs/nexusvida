@@ -2,12 +2,12 @@
 title: Saint Lucia
 icon: 🇱🇨
 data:
-  gpi:
-  gdp: 182
-  hdi: 108
-  whr:
-  col:
-  gci: 108
-  gfs: 30
+  global-peace-index:
+  gross-domestic-product: 182
+  human-development-index: 108
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 108
+  global-freedom-score: 30
 ---
 

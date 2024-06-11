@@ -2,12 +2,12 @@
 title: Nauru
 icon: 🇳🇷
 data:
-  gpi:
-  gdp: 211
-  hdi: 122
-  whr:
-  col:
-  gci:
-  gfs: 74
+  global-peace-index:
+  gross-domestic-product: 211
+  human-development-index: 122
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 74
 ---
 

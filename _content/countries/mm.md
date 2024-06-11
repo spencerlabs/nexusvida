@@ -2,11 +2,11 @@
 title: Myanmar
 icon: 🇲🇲
 data:
-  gpi: 145
-  gdp: 86
-  hdi: 144
-  whr: 118
-  col: 61
-  gci: 137
-  gfs: 189
+  global-peace-index: 145
+  gross-domestic-product: 86
+  human-development-index: 144
+  world-happiness-report: 118
+  cost-of-living: 61
+  good-country-index: 137
+  global-freedom-score: 189
 ---

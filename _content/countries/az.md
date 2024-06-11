@@ -2,11 +2,11 @@
 title: Azerbaijan
 icon: 🇦🇿
 data:
-  gpi: 95
-  gdp: 82
-  hdi: 89
-  whr: 101
-  col: 37
-  gci: 98
-  gfs: 194
+  global-peace-index: 95
+  gross-domestic-product: 82
+  human-development-index: 89
+  world-happiness-report: 101
+  cost-of-living: 37
+  good-country-index: 98
+  global-freedom-score: 194
 ---

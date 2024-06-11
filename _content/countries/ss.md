@@ -2,11 +2,11 @@
 title: South Sudan
 icon: 🇸🇸
 data:
-  gpi: 160
-  gdp: 163
-  hdi: 192
-  whr:
-  col:
-  gci:
-  gfs: 206
+  global-peace-index: 160
+  gross-domestic-product: 163
+  human-development-index: 192
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 206
 ---

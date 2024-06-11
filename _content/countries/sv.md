@@ -2,11 +2,11 @@
 title: El Salvador
 icon: 🇸🇻
 data:
-  gpi: 122
-  gdp: 104
-  hdi: 127
-  whr: 33
-  col: 72
-  gci: 104
-  gfs: 114
+  global-peace-index: 122
+  gross-domestic-product: 104
+  human-development-index: 127
+  world-happiness-report: 33
+  cost-of-living: 72
+  good-country-index: 104
+  global-freedom-score: 114
 ---

@@ -2,11 +2,11 @@
 title: New Zealand
 icon: 🇳🇿
 data:
-  gpi: 4
-  gdp: 53
-  hdi: 16
-  whr: 11
-  col: 131
-  gci: 19
-  gfs: 2
+  global-peace-index: 4
+  gross-domestic-product: 53
+  human-development-index: 16
+  world-happiness-report: 11
+  cost-of-living: 131
+  good-country-index: 19
+  global-freedom-score: 2
 ---

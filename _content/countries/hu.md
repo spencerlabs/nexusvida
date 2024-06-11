@@ -2,11 +2,11 @@
 title: Hungary
 icon: 🇭🇺
 data:
-  gpi: 18
-  gdp: 57
-  hdi: 47
-  whr: 56
-  col: 79
-  gci: 23
-  gfs: 95
+  global-peace-index: 18
+  gross-domestic-product: 57
+  human-development-index: 47
+  world-happiness-report: 56
+  cost-of-living: 79
+  good-country-index: 23
+  global-freedom-score: 95
 ---

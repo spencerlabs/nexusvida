@@ -2,12 +2,12 @@
 title: Liechtenstein
 icon: 🇱🇮
 data:
-  gpi:
-  gdp: 162
-  hdi: 12
-  whr:
-  col:
-  gci:
-  gfs: 38
+  global-peace-index:
+  gross-domestic-product: 162
+  human-development-index: 12
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 38
 ---
 

@@ -2,11 +2,11 @@
 title: Philippines
 icon: 🇵🇭
 data:
-  gpi: 115
-  gdp: 34
-  hdi: 113
-  whr: 53
-  col: 43
-  gci: 87
-  gfs: 106
+  global-peace-index: 115
+  gross-domestic-product: 34
+  human-development-index: 113
+  world-happiness-report: 53
+  cost-of-living: 43
+  good-country-index: 87
+  global-freedom-score: 106
 ---

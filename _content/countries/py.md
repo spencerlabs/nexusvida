@@ -2,12 +2,12 @@
 title: Paraguay
 icon: 🇵🇾
 data:
-  gpi: 69
-  gdp: 98
-  hdi: 102
-  whr: 57
-  col: 18
-  gci: 113
-  gfs: 97
+  global-peace-index: 69
+  gross-domestic-product: 98
+  human-development-index: 102
+  world-happiness-report: 57
+  cost-of-living: 18
+  good-country-index: 113
+  global-freedom-score: 97
 ---
 

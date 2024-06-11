@@ -2,12 +2,12 @@
 title: Maldives
 icon: 🇲🇻
 data:
-  gpi:
-  gdp: 161
-  hdi: 87
-  whr:
-  col: 98
-  gci: 153
-  gfs: 125
+  global-peace-index:
+  gross-domestic-product: 161
+  human-development-index: 87
+  world-happiness-report:
+  cost-of-living: 98
+  good-country-index: 153
+  global-freedom-score: 125
 ---
 

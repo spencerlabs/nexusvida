@@ -2,11 +2,11 @@
 title: Ethiopia
 icon: 🇪🇹
 data:
-  gpi: 151
-  gdp: 60
-  hdi: 176
-  whr: 130
-  col: 76
-  gci: 115
-  gfs: 165
+  global-peace-index: 151
+  gross-domestic-product: 60
+  human-development-index: 176
+  world-happiness-report: 130
+  cost-of-living: 76
+  good-country-index: 115
+  global-freedom-score: 165
 ---

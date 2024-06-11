@@ -2,11 +2,11 @@
 title: Guatemala
 icon: 🇬🇹
 data:
-  gpi: 103
-  gdp: 70
-  hdi: 136
-  whr: 42
-  col: 57
-  gci: 116
-  gfs: 124
+  global-peace-index: 103
+  gross-domestic-product: 70
+  human-development-index: 136
+  world-happiness-report: 42
+  cost-of-living: 57
+  good-country-index: 116
+  global-freedom-score: 124
 ---

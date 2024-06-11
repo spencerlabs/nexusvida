@@ -2,12 +2,12 @@
 title: Suriname
 icon: 🇸🇷
 data:
-  gpi:
-  gdp: 173
-  hdi: 124
-  whr:
-  col:
-  gci: 149
-  gfs: 70
+  global-peace-index:
+  gross-domestic-product: 173
+  human-development-index: 124
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 149
+  global-freedom-score: 70
 ---
 

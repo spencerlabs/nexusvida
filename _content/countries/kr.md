@@ -2,11 +2,11 @@
 title: South Korea
 icon: 🇰🇷
 data:
-  gpi: 43
-  gdp: 13
-  hdi: 19
-  whr: 52
-  col: 123
-  gci: 37
-  gfs: 58
+  global-peace-index: 43
+  gross-domestic-product: 13
+  human-development-index: 19
+  world-happiness-report: 52
+  cost-of-living: 123
+  good-country-index: 37
+  global-freedom-score: 58
 ---

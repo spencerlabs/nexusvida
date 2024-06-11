@@ -2,11 +2,11 @@
 title: Colombia
 icon: 🇨🇴
 data:
-  gpi: 140
-  gdp: 43
-  hdi: 91
-  whr: 78
-  col: 33
-  gci: 68
-  gfs: 82
+  global-peace-index: 140
+  gross-domestic-product: 43
+  human-development-index: 91
+  world-happiness-report: 78
+  cost-of-living: 33
+  good-country-index: 68
+  global-freedom-score: 82
 ---

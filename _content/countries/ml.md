@@ -2,11 +2,11 @@
 title: Mali
 icon: 🇲🇱
 data:
-  gpi: 153
-  gdp: 122
-  hdi: 188
-  whr: 122
-  col:
-  gci: 133
-  gfs: 156
+  global-peace-index: 153
+  gross-domestic-product: 122
+  human-development-index: 188
+  world-happiness-report: 122
+  cost-of-living:
+  good-country-index: 133
+  global-freedom-score: 156
 ---

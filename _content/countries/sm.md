@@ -2,12 +2,12 @@
 title: San Marino
 icon: 🇸🇲
 data:
-  gpi:
-  gdp: 189
-  hdi: 43
-  whr:
-  col:
-  gci:
-  gfs: 5
+  global-peace-index:
+  gross-domestic-product: 189
+  human-development-index: 43
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 5
 ---
 

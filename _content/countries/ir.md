@@ -2,11 +2,11 @@
 title: Iran
 icon: 🇮🇷
 data:
-  gpi: 147
-  gdp: 42
-  hdi: 78
-  whr: 100
-  col: 14
-  gci: 138
-  gfs: 185
+  global-peace-index: 147
+  gross-domestic-product: 42
+  human-development-index: 78
+  world-happiness-report: 100
+  cost-of-living: 14
+  good-country-index: 138
+  global-freedom-score: 185
 ---

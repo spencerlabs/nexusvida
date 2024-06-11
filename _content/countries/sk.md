@@ -2,11 +2,11 @@
 title: Slovakia
 icon: 🇸🇰
 data:
-  gpi: 26
-  gdp: 62
-  hdi: 45
-  whr: 45
-  col: 91
-  gci: 32
-  gfs: 38
+  global-peace-index: 26
+  gross-domestic-product: 62
+  human-development-index: 45
+  world-happiness-report: 45
+  cost-of-living: 91
+  good-country-index: 32
+  global-freedom-score: 38
 ---

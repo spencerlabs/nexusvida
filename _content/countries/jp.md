@@ -2,11 +2,11 @@
 title: Japan
 icon: 🇯🇵
 data:
-  gpi: 9
-  gdp: 4
-  hdi: 24
-  whr: 51
-  col: 100
-  gci: 34
-  gfs: 11
+  global-peace-index: 9
+  gross-domestic-product: 4
+  human-development-index: 24
+  world-happiness-report: 51
+  cost-of-living: 100
+  good-country-index: 34
+  global-freedom-score: 11
 ---

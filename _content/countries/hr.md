@@ -2,11 +2,11 @@
 title: Croatia
 icon: 🇭🇷
 data:
-  gpi: 14
-  gdp: 79
-  hdi: 39
-  whr: 63
-  col: 88
-  gci: 30
-  gfs: 58
+  global-peace-index: 14
+  gross-domestic-product: 79
+  human-development-index: 39
+  world-happiness-report: 63
+  cost-of-living: 88
+  good-country-index: 30
+  global-freedom-score: 58
 ---

@@ -2,11 +2,11 @@
 title: Germany
 icon: 🇩🇪
 data:
-  gpi: 15
-  gdp: 3
-  hdi: 7
-  whr: 24
-  col: 118
-  gci: 3
-  gfs: 24
+  global-peace-index: 15
+  gross-domestic-product: 3
+  human-development-index: 7
+  world-happiness-report: 24
+  cost-of-living: 118
+  good-country-index: 3
+  global-freedom-score: 24
 ---

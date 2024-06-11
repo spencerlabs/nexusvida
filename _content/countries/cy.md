@@ -2,12 +2,12 @@
 title: Cyprus
 icon: 🇨🇾
 data:
-  gpi: 64
-  gdp: 107
-  hdi: 29
-  whr: 50
-  col: 113
-  gci: 16
-  gfs: 30
+  global-peace-index: 64
+  gross-domestic-product: 107
+  human-development-index: 29
+  world-happiness-report: 50
+  cost-of-living: 113
+  good-country-index: 16
+  global-freedom-score: 30
 ---
 

@@ -2,11 +2,11 @@
 title: Congo
 icon: 🇨🇬
 data:
-  gpi: 113
-  gdp: 143
-  hdi: 149
-  whr: 89
-  col:
-  gci: 146
-  gfs: 171
+  global-peace-index: 113
+  gross-domestic-product: 143
+  human-development-index: 149
+  world-happiness-report: 89
+  cost-of-living:
+  good-country-index: 146
+  global-freedom-score: 171
 ---

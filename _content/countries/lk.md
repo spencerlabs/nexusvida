@@ -2,11 +2,11 @@
 title: Sri Lanka
 icon: 🇱🇰
 data:
-  gpi: 107
-  gdp: 87
-  hdi: 78
-  whr: 128
-  col: 40
-  gci: 129
-  gfs: 111
+  global-peace-index: 107
+  gross-domestic-product: 87
+  human-development-index: 78
+  world-happiness-report: 128
+  cost-of-living: 40
+  good-country-index: 129
+  global-freedom-score: 111
 ---

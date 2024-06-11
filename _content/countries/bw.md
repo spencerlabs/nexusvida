@@ -2,11 +2,11 @@
 title: Botswana
 icon: 🇧🇼
 data:
-  gpi: 42
-  gdp: 125
-  hdi: 114
-  whr: 137
-  col: 29
-  gci: 125
-  gfs: 79
+  global-peace-index: 42
+  gross-domestic-product: 125
+  human-development-index: 114
+  world-happiness-report: 137
+  cost-of-living: 29
+  good-country-index: 125
+  global-freedom-score: 79
 ---

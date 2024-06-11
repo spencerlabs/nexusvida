@@ -2,10 +2,10 @@
 title: Mauritania
 icon: 🇲🇷
 data:
-  gpi: 114
-  gdp: 154
-  hdi: 164
-  whr: 111
-  gci: 168
-  gfs: 135
+  global-peace-index: 114
+  gross-domestic-product: 154
+  human-development-index: 164
+  world-happiness-report: 111
+  good-country-index: 168
+  global-freedom-score: 135
 ---

@@ -2,12 +2,12 @@
 title: Malawi
 icon: 🇲🇼
 data:
-  gpi: 74
-  gdp: 147
-  hdi: 172
-  whr: 136
-  col:
-  gci: 127
-  gfs: 89
+  global-peace-index: 74
+  gross-domestic-product: 147
+  human-development-index: 172
+  world-happiness-report: 136
+  cost-of-living:
+  good-country-index: 127
+  global-freedom-score: 89
 ---
 

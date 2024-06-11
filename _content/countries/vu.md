@@ -2,11 +2,11 @@
 title: Vanuatu
 icon: 🇻🇺
 data:
-  gpi:
-  gdp: 197
-  hdi: 140
-  whr:
-  col:
-  gci: 101
-  gfs: 63
+  global-peace-index:
+  gross-domestic-product: 197
+  human-development-index: 140
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 101
+  global-freedom-score: 63
 ---

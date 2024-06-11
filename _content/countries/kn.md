@@ -2,12 +2,12 @@
 title: Saint Kitts and Nevis
 icon: 🇰🇳
 data:
-  gpi:
-  gdp: 199
-  hdi: 51
-  whr:
-  col:
-  gci: 134
-  gfs: 44
+  global-peace-index:
+  gross-domestic-product: 199
+  human-development-index: 51
+  world-happiness-report:
+  cost-of-living:
+  good-country-index: 134
+  global-freedom-score: 44
 ---
 

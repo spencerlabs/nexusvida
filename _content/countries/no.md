@@ -2,11 +2,11 @@
 title: Norway
 icon: 🇳🇴
 data:
-  gpi: 24
-  gdp: 27
-  hdi: 2
-  whr: 7
-  col: 138
-  gci: 11
-  gfs: 4
+  global-peace-index: 24
+  gross-domestic-product: 27
+  human-development-index: 2
+  world-happiness-report: 7
+  cost-of-living: 138
+  good-country-index: 11
+  global-freedom-score: 4
 ---

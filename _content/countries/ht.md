@@ -2,11 +2,11 @@
 title: Haiti
 icon: 🇭🇹
 data:
-  gpi: 129
-  gdp: 116
-  hdi: 158
-  whr:
-  col:
-  gci:
-  gfs: 147
+  global-peace-index: 129
+  gross-domestic-product: 116
+  human-development-index: 158
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 147
 ---

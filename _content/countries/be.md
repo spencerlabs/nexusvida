@@ -2,11 +2,11 @@
 title: Belgium
 icon: 🇧🇪
 data:
-  gpi: 20
-  gdp: 23
-  hdi: 12
-  whr: 16
-  col: 119
-  gci: 7
-  gfs: 11
+  global-peace-index: 20
+  gross-domestic-product: 23
+  human-development-index: 12
+  world-happiness-report: 16
+  cost-of-living: 119
+  good-country-index: 7
+  global-freedom-score: 11
 ---

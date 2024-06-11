@@ -2,11 +2,11 @@
 title: Eswatini
 icon: 🇸🇿
 data:
-  gpi: 109
-  gdp: 168
-  hdi: 142
-  whr: 135
-  col:
-  gci: 102
-  gfs: 171
+  global-peace-index: 109
+  gross-domestic-product: 168
+  human-development-index: 142
+  world-happiness-report: 135
+  cost-of-living:
+  good-country-index: 102
+  global-freedom-score: 171
 ---

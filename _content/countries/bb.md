@@ -2,12 +2,12 @@
 title: Barbados
 icon: 🇧🇧
 data:
-  gpi:
-  gdp: 164
-  hdi: 62
-  whr:
-  col: 139
-  gci: 94
-  gfs: 19
+  global-peace-index:
+  gross-domestic-product: 164
+  human-development-index: 62
+  world-happiness-report:
+  cost-of-living: 139
+  good-country-index: 94
+  global-freedom-score: 19
 ---
 

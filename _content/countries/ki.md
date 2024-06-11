@@ -2,12 +2,12 @@
 title: Kiribati
 icon: 🇰🇮
 data:
-  gpi:
-  gdp: 210
-  hdi: 137
-  whr:
-  col:
-  gci:
-  gfs: 38
+  global-peace-index:
+  gross-domestic-product: 210
+  human-development-index: 137
+  world-happiness-report:
+  cost-of-living:
+  good-country-index:
+  global-freedom-score: 38
 ---
 

@@ -2,11 +2,11 @@
 title: Cuba
 icon: 🇨🇺
 data:
-  gpi: 99
-  gdp: 63
-  hdi: 85
-  whr:
-  col: 84
-  gci:
-  gfs: 181
+  global-peace-index: 99
+  gross-domestic-product: 63
+  human-development-index: 85
+  world-happiness-report:
+  cost-of-living: 84
+  good-country-index:
+  global-freedom-score: 181
 ---
