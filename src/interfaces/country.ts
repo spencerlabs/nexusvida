@@ -3,5 +3,6 @@ export interface Country {
   slug: string
   content: string
   icon: string
+  continent: string | string[]
   data: Record<string, number>
 }

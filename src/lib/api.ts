@@ -1,8 +1,65 @@
+import { Continent } from '@/interfaces/continent'
 import { Country } from '@/interfaces/country'
 import { Dataset } from '@/interfaces/dataset'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
+
+const continentsDirectory = join(process.cwd(), '_content/continents')
+
+export function getContinentSlugs() {
+  return fs.readdirSync(continentsDirectory)
+}
+
+export function getContinentBySlug<C extends boolean = false>(
+  slug: string,
+  hideContent?: C,
+): C extends true ? Omit<Continent, 'content'> : Continent
+export function getContinentBySlug(
+  slug: string,
+  hideContent?: boolean,
+): Omit<Continent, 'content'> | Continent {
+  const realSlug = slug.replace(/\.md$/, '')
+  const fullPath = join(continentsDirectory, `${realSlug}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+
+  if (hideContent) {
+    return { ...data, slug: realSlug } as Continent
+  }
+
+  const rankings = getNexusVidaRankings()
+
+  const countries = getAllCountries()
+    .filter((c) => {
+      if (!c.continent) return false
+
+      if (typeof c.continent === 'string') {
+        return c.continent === realSlug
+      } else {
+        return c.continent.includes(realSlug)
+      }
+    })
+    .map((c) => ({
+      ...c,
+      ranking: rankings.find((r) => r.slug === c.slug)?.ranking,
+      score: rankings.find((r) => r.slug === c.slug)?.score,
+    }))
+    .sort((a, b) => (a?.ranking || 300) - (b?.ranking || 300))
+
+  return { ...data, countries, slug: realSlug, content } as Continent
+}
+
+export function getAllContinents() {
+  const slugs = getContinentSlugs()
+  const continents = slugs
+    .map((slug) => getContinentBySlug(slug, true))
+    // sort continents by date in descending order
+    .sort((continent1, continent2) =>
+      continent1.title < continent2.title ? -1 : 1,
+    )
+  return continents
+}
 
 const countriesDirectory = join(process.cwd(), '_content/countries')
 
