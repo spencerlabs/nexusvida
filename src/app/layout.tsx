@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import Link from 'next/link'
 import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
+import BackButton from '@/components/BackButton'
 import { getAllDatasets } from '@/lib/api'
 
 import './globals.css'
@@ -40,6 +42,12 @@ export default function RootLayout({
       60,
   )
 
+  const menuItems = [
+    { href: '/countries', label: 'Countries' },
+    { href: '/continents', label: 'Continents' },
+    { href: '/datasets', label: 'Datasets' },
+  ]
+
   return (
     <html lang="en">
       <body
@@ -57,21 +65,30 @@ export default function RootLayout({
           </Link>
         )}
         <header className="sticky top-0 z-30 grid h-12 grid-cols-[1fr_max-content_1fr] items-stretch bg-white px-wrap uppercase dark:bg-stone-950">
-          <nav className="flex h-full items-stretch text-sm font-bold">
-            <Link href="/countries" className="flex items-center">
-              Countries
-            </Link>
-          </nav>
+          <BackButton />
 
           <Link href="/" className="flex items-center px-2 text-2xl">
             Nexus<span className="font-bold">Vida</span>
           </Link>
 
-          <nav className="flex h-full items-stretch justify-self-end text-sm font-bold">
-            <Link href="/datasets" className="flex items-center">
-              Datasets
-            </Link>
-          </nav>
+          <Menu>
+            <MenuButton className="-mr-2 justify-self-end px-2">
+              <TbMenu aria-hidden className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </MenuButton>
+            <MenuItems
+              anchor="bottom end"
+              className="flex flex-col rounded-b-sm bg-white py-2 text-right font-semibold uppercase dark:bg-stone-950"
+            >
+              {menuItems.map((item) => (
+                <MenuItem key={item.label}>
+                  <Link href={item.href} className="px-3 py-2">
+                    {item.label}
+                  </Link>
+                </MenuItem>
+              ))}
+            </MenuItems>
+          </Menu>
         </header>
 
         <main className="mb-8 flex-1 bg-stone-100 px-wrap py-12 dark:bg-stone-900">
