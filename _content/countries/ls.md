@@ -1,6 +1,7 @@
 ---
 title: Lesotho
 icon: 🇱🇸
+continent: africa
 data:
   global-peace-index: 111
   gross-domestic-product: 184
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 112
   global-freedom-score: 89
+  democracy-index: 71
 ---

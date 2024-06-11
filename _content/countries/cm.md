@@ -1,6 +1,7 @@
 ---
 title: Cameroon
 icon: 🇨🇲
+continent: africa
 data:
   global-peace-index: 139
   gross-domestic-product: 94
@@ -9,5 +10,6 @@ data:
   cost-of-living: 66
   good-country-index: 119
   global-freedom-score: 175
+  democracy-index: 140
 ---
 

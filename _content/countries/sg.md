@@ -1,6 +1,7 @@
 ---
 title: Singapore
 icon: 🇸🇬
+continent: asia
 data:
   global-peace-index: 6
   gross-domestic-product: 32
@@ -9,4 +10,5 @@ data:
   cost-of-living: 140
   good-country-index: 25
   global-freedom-score: 122
+  democracy-index: 69
 ---

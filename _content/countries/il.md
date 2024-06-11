@@ -1,6 +1,7 @@
 ---
 title: Israel
 icon: 🇮🇱
+continent: asia
 data:
   global-peace-index: 143
   gross-domestic-product: 29
@@ -9,4 +10,5 @@ data:
   cost-of-living: 129
   good-country-index: 59
   global-freedom-score: 77
+  democracy-index: 30
 ---

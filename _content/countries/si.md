@@ -1,6 +1,7 @@
 ---
 title: Slovenia
 icon: 🇸🇮
+continent: europe
 data:
   global-peace-index: 8
   gross-domestic-product: 89
@@ -9,4 +10,5 @@ data:
   cost-of-living: 97
   good-country-index: 17
   global-freedom-score: 11
+  democracy-index: 31
 ---

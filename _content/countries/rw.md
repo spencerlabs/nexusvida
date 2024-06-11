@@ -1,6 +1,7 @@
 ---
 title: Rwanda
 icon: 🇷🇼
+continent: africa
 data:
   global-peace-index: 89
   gross-domestic-product: 145
@@ -9,4 +10,5 @@ data:
   cost-of-living: 12
   good-country-index: 71
   global-freedom-score: 161
+  democracy-index: 126
 ---

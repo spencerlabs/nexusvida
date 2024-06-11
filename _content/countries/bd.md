@@ -1,6 +1,7 @@
 ---
 title: Bangladesh
 icon: 🇧🇩
+continent: asia
 data:
   global-peace-index: 88
   gross-domestic-product: 33
@@ -9,4 +10,5 @@ data:
   cost-of-living: 7
   good-country-index: 105
   global-freedom-score: 134
+  democracy-index: 75
 ---

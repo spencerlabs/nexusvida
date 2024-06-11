@@ -1,6 +1,7 @@
 ---
 title: Serbia
 icon: 🇷🇸
+continent: europe
 data:
   global-peace-index: 65
   gross-domestic-product: 85
@@ -9,5 +10,6 @@ data:
   cost-of-living: 58
   good-country-index: 38
   global-freedom-score: 109
+  democracy-index: 64
 ---
 

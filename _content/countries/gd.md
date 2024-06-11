@@ -1,6 +1,7 @@
 ---
 title: Grenada
 icon: 🇬🇩
+continent: north-america
 data:
   global-peace-index:
   gross-domestic-product: 196
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 44
+  democracy-index:
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Lebanon
 icon: 🇱🇧
+continent: asia
 data:
   global-peace-index: 135
   gross-domestic-product: 103
@@ -9,4 +10,5 @@ data:
   cost-of-living: 86
   good-country-index: 82
   global-freedom-score: 130
+  democracy-index: 112
 ---

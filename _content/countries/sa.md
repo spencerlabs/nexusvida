@@ -1,6 +1,7 @@
 ---
 title: Saudi Arabia
 icon: 🇸🇦
+continent: asia
 data:
   global-peace-index: 119
   gross-domestic-product: 19
@@ -9,4 +10,5 @@ data:
   cost-of-living: 90
   good-country-index: 114
   global-freedom-score: 189
+  democracy-index: 150
 ---

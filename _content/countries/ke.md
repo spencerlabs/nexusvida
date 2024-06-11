@@ -1,6 +1,7 @@
 ---
 title: Kenya
 icon: 🇰🇪
+continent: africa
 data:
   global-peace-index: 117
   gross-domestic-product: 67
@@ -9,4 +10,5 @@ data:
   cost-of-living: 6
   good-country-index: 72
   global-freedom-score: 116
+  democracy-index: 94
 ---

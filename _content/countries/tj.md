@@ -1,6 +1,7 @@
 ---
 title: Tajikistan
 icon: 🇹🇯
+continent: asia
 data:
   global-peace-index: 102
   gross-domestic-product: 151
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 97
   global-freedom-score: 197
+  democracy-index: 157
 ---

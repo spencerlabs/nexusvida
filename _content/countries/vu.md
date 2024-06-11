@@ -1,6 +1,7 @@
 ---
 title: Vanuatu
 icon: 🇻🇺
+continent: oceania
 data:
   global-peace-index:
   gross-domestic-product: 197
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 101
   global-freedom-score: 63
+  democracy-index:
 ---

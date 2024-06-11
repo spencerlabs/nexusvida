@@ -1,6 +1,7 @@
 ---
 title: Paraguay
 icon: 🇵🇾
+continent: south-america
 data:
   global-peace-index: 69
   gross-domestic-product: 98
@@ -9,5 +10,6 @@ data:
   cost-of-living: 18
   good-country-index: 113
   global-freedom-score: 97
+  democracy-index: 74
 ---
 

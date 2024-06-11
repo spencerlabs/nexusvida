@@ -1,6 +1,7 @@
 ---
 title: France
 icon: 🇫🇷
+continent: europe
 data:
   global-peace-index: 67
   gross-domestic-product: 7
@@ -9,4 +10,5 @@ data:
   cost-of-living: 126
   good-country-index: 9
   global-freedom-score: 44
+  democracy-index: 23
 ---

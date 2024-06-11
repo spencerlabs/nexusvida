@@ -1,6 +1,7 @@
 ---
 title: Croatia
 icon: 🇭🇷
+continent: europe
 data:
   global-peace-index: 14
   gross-domestic-product: 79
@@ -9,4 +10,5 @@ data:
   cost-of-living: 88
   good-country-index: 30
   global-freedom-score: 58
+  democracy-index: 58
 ---

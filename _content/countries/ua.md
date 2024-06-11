@@ -1,6 +1,7 @@
 ---
 title: Ukraine
 icon: 🇺🇦
+continent: europe
 data:
   global-peace-index: 157
   gross-domestic-product: 58
@@ -9,4 +10,5 @@ data:
   cost-of-living: 22
   good-country-index: 57
   global-freedom-score: 120
+  democracy-index: 91
 ---

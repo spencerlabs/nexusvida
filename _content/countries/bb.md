@@ -1,6 +1,7 @@
 ---
 title: Barbados
 icon: 🇧🇧
+continent: north-america
 data:
   global-peace-index:
   gross-domestic-product: 164
@@ -9,5 +10,6 @@ data:
   cost-of-living: 139
   good-country-index: 94
   global-freedom-score: 19
+  democracy-index:
 ---
 

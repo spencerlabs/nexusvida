@@ -1,6 +1,7 @@
 ---
 title: Malawi
 icon: 🇲🇼
+continent: africa
 data:
   global-peace-index: 74
   gross-domestic-product: 147
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index: 127
   global-freedom-score: 89
+  democracy-index: 76
 ---
 

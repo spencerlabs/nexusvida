@@ -1,6 +1,7 @@
 ---
 title: Vietnam
 icon: 🇻🇳
+continent: asia
 data:
   global-peace-index: 41
   gross-domestic-product: 35
@@ -9,4 +10,5 @@ data:
   cost-of-living: 35
   good-country-index: 120
   global-freedom-score: 167
+  democracy-index: 136
 ---

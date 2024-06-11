@@ -1,6 +1,7 @@
 ---
 title: Malaysia
 icon: 🇲🇾
+continent: asia
 data:
   global-peace-index: 19
   gross-domestic-product: 36
@@ -9,4 +10,5 @@ data:
   cost-of-living: 32
   good-country-index: 48
   global-freedom-score: 114
+  democracy-index: 40
 ---

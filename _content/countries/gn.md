@@ -1,6 +1,7 @@
 ---
 title: Guinea
 icon: 🇬🇳
+continent: africa
 data:
   global-peace-index: 127
   gross-domestic-product: 119
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 155
   global-freedom-score: 147
+  democracy-index: 145
 ---

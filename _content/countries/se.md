@@ -1,6 +1,7 @@
 ---
 title: Sweden
 icon: 🇸🇪
+continent: europe
 data:
   global-peace-index: 28
   gross-domestic-product: 25
@@ -9,4 +10,5 @@ data:
   cost-of-living: 117
   good-country-index: 1
   global-freedom-score: 2
+  democracy-index: 4
 ---

@@ -1,6 +1,7 @@
 ---
 title: Moldova
 icon: 🇲🇩
+continent: europe
 data:
   global-peace-index: 57
   gross-domestic-product: 137
@@ -9,4 +10,5 @@ data:
   cost-of-living: 49
   good-country-index: 40
   global-freedom-score: 100
+  democracy-index: 68
 ---

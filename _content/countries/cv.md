@@ -1,6 +1,7 @@
 ---
 title: Cabo Verde
 icon: 🇨🇻
+continent: africa
 data:
   global-peace-index:
   gross-domestic-product: 181
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index: 118
   global-freedom-score: 30
+  democracy-index: 35
 ---
 

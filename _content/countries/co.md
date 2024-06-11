@@ -1,6 +1,7 @@
 ---
 title: Colombia
 icon: 🇨🇴
+continent: south-america
 data:
   global-peace-index: 140
   gross-domestic-product: 43
@@ -9,4 +10,5 @@ data:
   cost-of-living: 33
   good-country-index: 68
   global-freedom-score: 82
+  democracy-index: 55
 ---

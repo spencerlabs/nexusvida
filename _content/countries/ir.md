@@ -1,6 +1,7 @@
 ---
 title: Iran
 icon: 🇮🇷
+continent: asia
 data:
   global-peace-index: 147
   gross-domestic-product: 42
@@ -9,4 +10,5 @@ data:
   cost-of-living: 14
   good-country-index: 138
   global-freedom-score: 185
+  democracy-index: 154
 ---

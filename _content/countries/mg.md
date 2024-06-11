@@ -1,6 +1,7 @@
 ---
 title: Madagascar
 icon: 🇲🇬
+continent: africa
 data:
   global-peace-index: 55
   gross-domestic-product: 139
@@ -9,4 +10,5 @@ data:
   cost-of-living: 9
   good-country-index: 89
   global-freedom-score: 106
+  democracy-index: 80
 ---

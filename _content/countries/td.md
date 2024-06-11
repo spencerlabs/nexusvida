@@ -1,6 +1,7 @@
 ---
 title: Chad
 icon: 🇹🇩
+continent: africa
 data:
   global-peace-index: 142
   gross-domestic-product: 150
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 148
   global-freedom-score: 175
+  democracy-index: 160
 ---

@@ -1,6 +1,7 @@
 ---
 title: Nigeria
 icon: 🇳🇬
+continent: africa
 data:
   global-peace-index: 144
   gross-domestic-product: 39
@@ -9,4 +10,5 @@ data:
   cost-of-living: 2
   good-country-index: 140
   global-freedom-score: 125
+  democracy-index: 105
 ---

@@ -1,6 +1,7 @@
 ---
 title: Brunei
 icon: 🇧🇳
+continent: asia
 data:
   global-peace-index:
   gross-domestic-product: 140
@@ -9,5 +10,6 @@ data:
   cost-of-living: 99
   good-country-index: 111
   global-freedom-score: 151
+  democracy-index:
 ---
 

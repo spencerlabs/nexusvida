@@ -1,6 +1,7 @@
 ---
 title: Andorra
 icon: 🇦🇩
+continent: europe
 data:
   global-peace-index:
   gross-domestic-product: 172
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 24
+  democracy-index:
 ---
 

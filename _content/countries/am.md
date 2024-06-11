@@ -1,6 +1,7 @@
 ---
 title: Armenia
 icon: 🇦🇲
+continent: asia
 data:
   global-peace-index: 66
   gross-domestic-product: 118
@@ -9,5 +10,6 @@ data:
   cost-of-living: 60
   good-country-index: 43
   global-freedom-score: 111
+  democracy-index: 84
 ---
 

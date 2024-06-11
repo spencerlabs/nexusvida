@@ -1,6 +1,7 @@
 ---
 title: Saint Vincent and the Grenadines
 icon: 🇻🇨
+continent: north-america
 data:
   global-peace-index:
   gross-domestic-product: 200
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index: 156
   global-freedom-score: 38
+  democracy-index:
 ---
 

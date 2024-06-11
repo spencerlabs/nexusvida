@@ -1,6 +1,7 @@
 ---
 title: Gambia
 icon: 🇬🇲
+continent: africa
 data:
   global-peace-index: 59
   gross-domestic-product: 183
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 119
+  democracy-index: 102
 ---

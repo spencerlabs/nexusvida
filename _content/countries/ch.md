@@ -1,6 +1,7 @@
 ---
 title: Switzerland
 icon: 🇨🇭
+continent: europe
 data:
   global-peace-index: 10
   gross-domestic-product: 20
@@ -9,4 +10,5 @@ data:
   cost-of-living: 145
   good-country-index: 15
   global-freedom-score: 11
+  democracy-index: 8
 ---

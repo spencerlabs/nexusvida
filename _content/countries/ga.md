@@ -1,6 +1,7 @@
 ---
 title: Gabon
 icon: 🇬🇦
+continent: africa
 data:
   global-peace-index: 93
   gross-domestic-product: 129
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 147
   global-freedom-score: 165
+  democracy-index: 118
 ---

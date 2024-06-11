@@ -1,6 +1,7 @@
 ---
 title: Chile
 icon: 🇨🇱
+continent: south-america
 data:
   global-peace-index: 58
   gross-domestic-product: 45
@@ -9,4 +10,5 @@ data:
   cost-of-living: 69
   good-country-index: 33
   global-freedom-score: 19
+  democracy-index: 25
 ---

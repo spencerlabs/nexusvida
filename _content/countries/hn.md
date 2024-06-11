@@ -1,6 +1,7 @@
 ---
 title: Honduras
 icon: 🇭🇳
+continent: north-america
 data:
   global-peace-index: 120
   gross-domestic-product: 105
@@ -9,4 +10,5 @@ data:
   cost-of-living: 56
   good-country-index: 144
   global-freedom-score: 122
+  democracy-index: 95
 ---

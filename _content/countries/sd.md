@@ -1,6 +1,7 @@
 ---
 title: Sudan
 icon: 🇸🇩
+continent: africa
 data:
   global-peace-index: 155
   gross-domestic-product: 117
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 165
   global-freedom-score: 195
+  democracy-index: 144
 ---

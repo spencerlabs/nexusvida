@@ -1,5 +1,6 @@
 ---
 title: Monaco
+continent: europe
 icon: 🇲🇨
 data:
   global-peace-index:
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 63
+  democracy-index:
 ---
 

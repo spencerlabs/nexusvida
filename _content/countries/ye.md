@@ -1,6 +1,7 @@
 ---
 title: Yemen
 icon: 🇾🇪
+continent: asia
 data:
   global-peace-index: 162
   gross-domestic-product: 123
@@ -9,4 +10,5 @@ data:
   cost-of-living: 111
   good-country-index: 161
   global-freedom-score: 186
+  democracy-index: 155
 ---

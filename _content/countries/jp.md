@@ -1,6 +1,7 @@
 ---
 title: Japan
 icon: 🇯🇵
+continent: asia
 data:
   global-peace-index: 9
   gross-domestic-product: 4
@@ -9,4 +10,5 @@ data:
   cost-of-living: 100
   good-country-index: 34
   global-freedom-score: 11
+  democracy-index: 16
 ---

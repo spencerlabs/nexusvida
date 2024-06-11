@@ -1,6 +1,7 @@
 ---
 title: Turkey
 icon: 🇹🇷
+continent: asia
 data:
   global-peace-index: 148
   gross-domestic-product: 17
@@ -9,4 +10,5 @@ data:
   cost-of-living: 45
   good-country-index: 53
   global-freedom-score: 143
+  democracy-index: 102
 ---

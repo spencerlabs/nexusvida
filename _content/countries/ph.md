@@ -1,6 +1,7 @@
 ---
 title: Philippines
 icon: 🇵🇭
+continent: asia
 data:
   global-peace-index: 115
   gross-domestic-product: 34
@@ -9,4 +10,5 @@ data:
   cost-of-living: 43
   good-country-index: 87
   global-freedom-score: 106
+  democracy-index: 53
 ---

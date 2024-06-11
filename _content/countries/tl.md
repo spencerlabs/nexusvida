@@ -1,6 +1,7 @@
 ---
 title: Timor-Leste
 icon: 🇹🇱
+continent: asia
 data:
   global-peace-index: 49
   gross-domestic-product: 188
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 103
   global-freedom-score: 79
+  democracy-index:
 ---

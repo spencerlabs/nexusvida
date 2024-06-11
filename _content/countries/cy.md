@@ -1,6 +1,7 @@
 ---
 title: Cyprus
 icon: 🇨🇾
+continent: europe
 data:
   global-peace-index: 64
   gross-domestic-product: 107
@@ -9,5 +10,6 @@ data:
   cost-of-living: 113
   good-country-index: 16
   global-freedom-score: 30
+  democracy-index: 37
 ---
 

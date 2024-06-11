@@ -1,6 +1,7 @@
 ---
 title: Nauru
 icon: 🇳🇷
+continent: oceania
 data:
   global-peace-index:
   gross-domestic-product: 211
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 74
+  democracy-index:
 ---
 

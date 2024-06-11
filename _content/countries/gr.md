@@ -1,6 +1,7 @@
 ---
 title: Greece
 icon: 🇬🇷
+continent: europe
 data:
   global-peace-index: 60
   gross-domestic-product: 54
@@ -9,4 +10,5 @@ data:
   cost-of-living: 107
   good-country-index: 36
   global-freedom-score: 51
+  democracy-index: 20
 ---

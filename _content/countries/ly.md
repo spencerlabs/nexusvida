@@ -1,6 +1,7 @@
 ---
 title: Libya
 icon: 🇱🇾
+continent: africa
 data:
   global-peace-index: 137
   gross-domestic-product: 101
@@ -9,4 +10,5 @@ data:
   cost-of-living: 3
   good-country-index: 166
   global-freedom-score: 187
+  democracy-index: 151
 ---

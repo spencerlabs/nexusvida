@@ -1,6 +1,7 @@
 ---
 title: Qatar
 icon: 🇶🇦
+continent: asia
 data:
   global-peace-index: 21
   gross-domestic-product: 55
@@ -9,4 +10,5 @@ data:
   cost-of-living: 108
   good-country-index: 109
   global-freedom-score: 158
+  democracy-index: 111
 ---

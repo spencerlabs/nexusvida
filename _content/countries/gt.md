@@ -1,6 +1,7 @@
 ---
 title: Guatemala
 icon: 🇬🇹
+continent: north-america
 data:
   global-peace-index: 103
   gross-domestic-product: 70
@@ -9,4 +10,5 @@ data:
   cost-of-living: 57
   good-country-index: 116
   global-freedom-score: 124
+  democracy-index: 100
 ---

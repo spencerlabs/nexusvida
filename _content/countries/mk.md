@@ -1,6 +1,7 @@
 ---
 title: North Macedonia
 icon: 🇲🇰
+continent: europe
 data:
   global-peace-index: 38
   gross-domestic-product: 138
@@ -9,4 +10,5 @@ data:
   cost-of-living: 48
   good-country-index: 39
   global-freedom-score: 86
+  democracy-index: 72
 ---

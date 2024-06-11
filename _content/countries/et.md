@@ -1,6 +1,7 @@
 ---
 title: Ethiopia
 icon: 🇪🇹
+continent: africa
 data:
   global-peace-index: 151
   gross-domestic-product: 60
@@ -9,4 +10,5 @@ data:
   cost-of-living: 76
   good-country-index: 115
   global-freedom-score: 165
+  democracy-index: 122
 ---

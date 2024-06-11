@@ -1,6 +1,7 @@
 ---
 title: Belize
 icon: 🇧🇿
+continent: north-america
 data:
   global-peace-index:
   gross-domestic-product: 176
@@ -9,5 +10,6 @@ data:
   cost-of-living: 92
   good-country-index: 150
   global-freedom-score: 49
+  democracy-index:
 ---
 

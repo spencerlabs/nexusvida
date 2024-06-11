@@ -1,6 +1,7 @@
 ---
 title: Egypt
 icon: 🇪🇬
+continent: africa
 data:
   global-peace-index: 121
   gross-domestic-product: 38
@@ -9,4 +10,5 @@ data:
   cost-of-living: 25
   good-country-index: 75
   global-freedom-score: 169
+  democracy-index: 127
 ---

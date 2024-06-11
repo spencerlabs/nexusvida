@@ -1,6 +1,7 @@
 ---
 title: Zambia
 icon: 🇿🇲
+continent: africa
 data:
   global-peace-index: 63
   gross-domestic-product: 113
@@ -9,5 +10,6 @@ data:
   cost-of-living: 67
   good-country-index: 81
   global-freedom-score: 111
+  democracy-index: 78
 ---
 

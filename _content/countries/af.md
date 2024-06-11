@@ -1,6 +1,7 @@
 ---
 title: Afghanistan
 icon: 🇦🇫
+continent: asia
 data:
   global-peace-index: 163
   gross-domestic-product: 141
@@ -9,4 +10,5 @@ data:
   cost-of-living: 5
   good-country-index: 162
   global-freedom-score: 195
+  democracy-index: 167
 ---

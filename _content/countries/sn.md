@@ -1,6 +1,7 @@
 ---
 title: Senegal
 icon: 🇸🇳
+continent: africa
 data:
   global-peace-index: 52
   gross-domestic-product: 109
@@ -9,4 +10,5 @@ data:
   cost-of-living: 81
   good-country-index: 122
   global-freedom-score: 86
+  democracy-index: 79
 ---

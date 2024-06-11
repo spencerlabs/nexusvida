@@ -1,6 +1,7 @@
 ---
 title: Kyrgyzstan
 icon: 🇰🇬
+continent: asia
 data:
   global-peace-index: 101
   gross-domestic-product: 148
@@ -9,4 +10,5 @@ data:
   cost-of-living: 15
   good-country-index: 80
   global-freedom-score: 153
+  democracy-index: 109
 ---

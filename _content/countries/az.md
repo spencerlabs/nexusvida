@@ -1,6 +1,7 @@
 ---
 title: Azerbaijan
 icon: 🇦🇿
+continent: asia
 data:
   global-peace-index: 95
   gross-domestic-product: 82
@@ -9,4 +10,5 @@ data:
   cost-of-living: 37
   good-country-index: 98
   global-freedom-score: 194
+  democracy-index: 130
 ---

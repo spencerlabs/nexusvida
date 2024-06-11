@@ -1,6 +1,7 @@
 ---
 title: Australia
 icon: 🇦🇺
+continent: oceania
 data:
   global-peace-index: 22
   gross-domestic-product: 14
@@ -9,4 +10,5 @@ data:
   cost-of-living: 134
   good-country-index: 18
   global-freedom-score: 17
+  democracy-index: 14
 ---

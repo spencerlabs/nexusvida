@@ -1,6 +1,7 @@
 ---
 title: Algeria
 icon: 🇩🇿
+continent: africa
 data:
   global-peace-index: 96
   gross-domestic-product: 56
@@ -9,4 +10,5 @@ data:
   cost-of-living: 26
   good-country-index: 136
   global-freedom-score: 146
+  democracy-index: 110
 ---

@@ -1,6 +1,7 @@
 ---
 title: Mauritania
 icon: 🇲🇷
+continent: africa
 data:
   global-peace-index: 114
   gross-domestic-product: 154
@@ -8,4 +9,5 @@ data:
   world-happiness-report: 111
   good-country-index: 168
   global-freedom-score: 135
+  democracy-index: 108
 ---

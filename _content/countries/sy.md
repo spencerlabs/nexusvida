@@ -1,6 +1,7 @@
 ---
 title: Syria
 icon: 🇸🇾
+continent: asia
 data:
   global-peace-index: 161
   gross-domestic-product: 128
@@ -9,4 +10,5 @@ data:
   cost-of-living: 8
   good-country-index: 169
   global-freedom-score: 206
+  democracy-index: 163
 ---

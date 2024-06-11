@@ -1,6 +1,7 @@
 ---
 title: Mozambique
 icon: 🇲🇿
+continent: africa
 data:
   global-peace-index: 118
   gross-domestic-product: 121
@@ -9,4 +10,5 @@ data:
   cost-of-living: 75
   good-country-index: 117
   global-freedom-score: 125
+  democracy-index: 117
 ---

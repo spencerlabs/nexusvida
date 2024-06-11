@@ -1,6 +1,7 @@
 ---
 title: Luxembourg
 icon: 🇱🇺
+continent: europe
 data:
   global-peace-index:
   gross-domestic-product: 74
@@ -9,4 +10,5 @@ data:
   cost-of-living: 124
   good-country-index: 12
   global-freedom-score: 5
+  democracy-index: 11
 ---

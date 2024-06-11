@@ -1,6 +1,7 @@
 ---
 title: Panama
 icon: 🇦🇲
+continent: north-america
 data:
   global-peace-index: 68
   gross-domestic-product: 77
@@ -9,5 +10,6 @@ data:
   cost-of-living: 89
   good-country-index: 61
   global-freedom-score: 58
+  democracy-index: 48
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Canada
 icon: 🇨🇦
+continent: north-america
 data:
   global-peace-index: 11
   gross-domestic-product: 10
@@ -9,4 +10,5 @@ data:
   cost-of-living: 132
   good-country-index: 6
   global-freedom-score: 5
+  democracy-index: 13
 ---

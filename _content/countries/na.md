@@ -1,6 +1,7 @@
 ---
 title: Namibia
 icon: 🇳🇦
+continent: africa
 data:
   global-peace-index: 56
   gross-domestic-product: 149
@@ -9,4 +10,5 @@ data:
   cost-of-living: 34
   good-country-index: 90
   global-freedom-score: 74
+  democracy-index: 58
 ---

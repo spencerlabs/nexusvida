@@ -1,6 +1,7 @@
 ---
 title: Pakistan
 icon: 🇵🇰
+continent: asia
 data:
   global-peace-index: 146
   gross-domestic-product: 46
@@ -9,4 +10,5 @@ data:
   cost-of-living: 1
   good-country-index: 110
   global-freedom-score: 141
+  democracy-index: 118
 ---

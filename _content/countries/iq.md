@@ -1,6 +1,7 @@
 ---
 title: Iraq
 icon: 🇮🇶
+continent: asia
 data:
   global-peace-index: 154
   gross-domestic-product: 49
@@ -9,4 +10,5 @@ data:
   cost-of-living: 30
   good-country-index: 164
   global-freedom-score: 147
+  democracy-index: 128
 ---

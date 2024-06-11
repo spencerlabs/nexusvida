@@ -1,6 +1,7 @@
 ---
 title: Poland
 icon: 🇵🇱
+continent: europe
 data:
   global-peace-index: 29
   gross-domestic-product: 21
@@ -9,4 +10,5 @@ data:
   cost-of-living: 73
   good-country-index: 27
   global-freedom-score: 67
+  democracy-index: 41
 ---

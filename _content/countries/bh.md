@@ -1,6 +1,7 @@
 ---
 title: Bahrain
 icon: 🇧🇭
+continent: asia
 data:
   global-peace-index: 108
   gross-domestic-product: 97
@@ -9,4 +10,5 @@ data:
   cost-of-living: 106
   good-country-index: 145
   global-freedom-score: 181
+  democracy-index: 139
 ---

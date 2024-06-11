@@ -1,6 +1,7 @@
 ---
 title: Somalia
 icon: 🇸🇴
+continent: africa
 data:
   global-peace-index: 156
   gross-domestic-product: 152
@@ -9,4 +10,5 @@ data:
   cost-of-living: 24
   good-country-index:
   global-freedom-score: 189
+  democracy-index:
 ---

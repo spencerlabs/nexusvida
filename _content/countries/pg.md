@@ -1,6 +1,7 @@
 ---
 title: Papua New Guinea
 icon: 🇵🇬
+continent: oceania
 data:
   global-peace-index: 98
   gross-domestic-product: 108
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 154
   global-freedom-score: 100
+  democracy-index: 72
 ---

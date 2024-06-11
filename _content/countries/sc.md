@@ -1,6 +1,7 @@
 ---
 title: Seychelles
 icon: 🇸🇨
+continent: africa
 data:
   global-peace-index:
   gross-domestic-product: 186
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index: 76
   global-freedom-score: 70
+  democracy-index:
 ---
 

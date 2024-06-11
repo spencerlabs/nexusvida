@@ -1,6 +1,7 @@
 ---
 title: San Marino
 icon: 🇸🇲
+continent: europe
 data:
   global-peace-index:
   gross-domestic-product: 189
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 5
+  democracy-index:
 ---
 

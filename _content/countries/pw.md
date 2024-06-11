@@ -1,6 +1,7 @@
 ---
 title: Palau
 icon: 🇵🇼
+continent: oceania
 data:
   global-peace-index:
   gross-domestic-product: 209
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 30
+  democracy-index:
 ---
 

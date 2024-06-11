@@ -1,6 +1,7 @@
 ---
 title: Eswatini
 icon: 🇸🇿
+continent: africa
 data:
   global-peace-index: 109
   gross-domestic-product: 168
@@ -9,4 +10,5 @@ data:
   cost-of-living:
   good-country-index: 102
   global-freedom-score: 171
+  democracy-index: 129
 ---

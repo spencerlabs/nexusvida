@@ -1,6 +1,7 @@
 ---
 title: Tunisia
 icon: 🇹🇳
+continent: africa
 data:
   global-peace-index: 81
   gross-domestic-product: 92
@@ -9,5 +10,6 @@ data:
   cost-of-living: 23
   good-country-index: 47
   global-freedom-score: 117
+  democracy-index: 82
 ---
 

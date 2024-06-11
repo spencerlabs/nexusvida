@@ -1,6 +1,7 @@
 ---
 title: Oman
 icon: 🇴🇲
+continent: asia
 data:
   global-peace-index: 48
   gross-domestic-product: 68
@@ -9,4 +10,5 @@ data:
   cost-of-living: 82
   good-country-index: 131
   global-freedom-score: 159
+  democracy-index: 119
 ---

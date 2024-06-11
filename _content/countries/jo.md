@@ -1,6 +1,7 @@
 ---
 title: Jordan
 icon: 🇯🇴
+continent: asia
 data:
   global-peace-index: 62
   gross-domestic-product: 93
@@ -9,5 +10,6 @@ data:
   cost-of-living: 74
   good-country-index: 78
   global-freedom-score: 143
+  democracy-index: 122
 ---
 

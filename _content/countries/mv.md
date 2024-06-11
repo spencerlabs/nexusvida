@@ -1,6 +1,7 @@
 ---
 title: Maldives
 icon: 🇲🇻
+continent: asia
 data:
   global-peace-index:
   gross-domestic-product: 161
@@ -9,5 +10,6 @@ data:
   cost-of-living: 98
   good-country-index: 153
   global-freedom-score: 125
+  democracy-index:
 ---
 

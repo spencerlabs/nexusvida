@@ -1,6 +1,7 @@
 ---
 title: Comoros
 icon: 🇰🇲
+continent: africa
 data:
   global-peace-index:
   gross-domestic-product: 195
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index:
   global-freedom-score: 130
+  democracy-index: 120
 ---
 

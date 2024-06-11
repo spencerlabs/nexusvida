@@ -1,6 +1,7 @@
 ---
 title: Tonga
 icon: 🇹🇴
+continent: oceania
 data:
   global-peace-index:
   gross-domestic-product: 204
@@ -9,5 +10,6 @@ data:
   cost-of-living:
   good-country-index: 141
   global-freedom-score: 66
+  democracy-index:
 ---
 
