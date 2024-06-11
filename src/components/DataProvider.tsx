@@ -19,6 +19,7 @@ interface DataContextProps {
   >
   search: string
   setSearch: React.Dispatch<React.SetStateAction<string>>
+  total: number
 }
 
 const DataContext = createContext<DataContextProps>({
@@ -27,6 +28,7 @@ const DataContext = createContext<DataContextProps>({
   setSort: () => {},
   search: '',
   setSearch: () => {},
+  total: 0,
 })
 
 interface DataProviderProps {
@@ -64,7 +66,16 @@ const DataProvider = ({ children, initialData }: DataProviderProps) => {
   }, [sortData])
 
   return (
-    <DataContext.Provider value={{ data, sort, setSort, search, setSearch }}>
+    <DataContext.Provider
+      value={{
+        data,
+        sort,
+        setSort,
+        search,
+        setSearch,
+        total: initialData.length,
+      }}
+    >
       {children}
     </DataContext.Provider>
   )
