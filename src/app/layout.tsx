@@ -12,7 +12,10 @@ import './globals.css'
 const font = Work_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NexusVida | Finding the best country through external data',
+  title: {
+    template: '%s | NexusVida',
+    default: 'NexusVida | Finding the best country through external data',
+  },
 }
 
 export default function RootLayout({

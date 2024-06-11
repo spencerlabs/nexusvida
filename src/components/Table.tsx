@@ -20,6 +20,7 @@ const Table = ({ showScore, ...props }: TableProps) => {
   return (
     <div>
       <SearchFilter />
+
       <div
         {...props}
         role="table"
@@ -81,10 +82,10 @@ const Table = ({ showScore, ...props }: TableProps) => {
                   role="cell"
                   className="block p-2 text-center text-sm font-bold"
                 >
-                  {i > 0 && country.ranking === data[i - 1].ranking ? (
+                  {i > 0 && country.ranking && country.ranking === data[i - 1].ranking ? (
                     <span className="sr-only">{country.ranking}</span>
                   ) : (
-                    country.ranking
+                    country.ranking || '--'
                   )}
                 </div>
                 <div role="cell">

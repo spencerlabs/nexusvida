@@ -6,19 +6,19 @@ import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
 
 export const metadata: Metadata = {
-  title: 'Datasets | NexusVida',
+  title: 'Datasets',
 }
 
 export default function DatasetsPage() {
   const datasets = getAllDatasets()
 
-  if (datasets.length === 0) {
-    return notFound()
-  }
+  if (datasets.length === 0) return notFound()
+
   return (
     <div className="mx-auto w-full max-w-4xl">
       <div className="mb-8 space-y-1 text-center">
         <h1>Datasets</h1>
+
         <p className="text-xs">
           NexusVida API:{' '}
           <Link

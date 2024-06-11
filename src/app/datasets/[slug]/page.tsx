@@ -19,16 +19,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const dataset = getDatasetBySlug(params.slug)
 
   return {
-    title: `${dataset.title} | Datasets | Nexus Vida`,
+    title: `${dataset.title} | Datasets`,
   }
 }
 
 export default async function Dataset({ params }: Params) {
   const dataset = getDatasetBySlug(params.slug)
 
-  if (!dataset) {
-    return notFound()
-  }
+  if (!dataset) return notFound()
 
   const content = await markdownToHtml(dataset.content || '')
 

@@ -16,16 +16,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const country = getCountryBySlug(params.slug)
 
   return {
-    title: `${country.title} | Countries | Nexus Vida`,
+    title: `${country.title} | Countries`,
   }
 }
 
 export default async function Country({ params }: Params) {
   const country = getCountryBySlug(params.slug)
 
-  if (!country) {
-    return notFound()
-  }
+  if (!country) return notFound()
 
   const datasets = getAllDatasets()
 
@@ -51,6 +49,7 @@ export default async function Country({ params }: Params) {
           </span>
           {country.title}
         </h1>
+
         <p className="text-xs">
           NexusVida API:{' '}
           <Link

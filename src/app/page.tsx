@@ -12,6 +12,7 @@ export default async function Home() {
       <div className="mx-auto w-full max-w-md">
         <div className="mb-8 space-y-1 text-center">
           <h1 id="table-label">NexusVida Rankings</h1>
+
           <p className="text-xs">
             NexusVida API:{' '}
             <Link

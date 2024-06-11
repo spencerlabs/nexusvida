@@ -6,19 +6,19 @@ import ArticleItem from '@/components/ArticleItem'
 import { getAllCountries } from '@/lib/api'
 
 export const metadata: Metadata = {
-  title: 'Countries | NexusVida',
+  title: 'Countries',
 }
 
 export default function CountriesPage() {
   const countries = getAllCountries()
 
-  if (countries.length === 0) {
-    return notFound()
-  }
+  if (countries.length === 0) return notFound()
+
   return (
     <div className="mx-auto w-full max-w-4xl">
       <div className="mb-8 space-y-1 text-center">
         <h1>Countries</h1>
+
         <p className="text-xs">
           NexusVida API:{' '}
           <Link
