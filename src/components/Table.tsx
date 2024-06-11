@@ -33,7 +33,7 @@ const Table = ({ showScore, ...props }: TableProps) => {
         >
           <div
             role="row"
-            className="col-span-full grid grid-cols-subgrid border-b-2 border-stone-400 bg-stone-100 text-xs font-bold uppercase dark:border-stone-600 dark:bg-stone-900"
+            className="col-span-full grid grid-cols-subgrid border-b-2 bg-stone-100 text-xs font-bold uppercase dark:bg-stone-900"
           >
             <div
               role="columnheader"
@@ -76,7 +76,7 @@ const Table = ({ showScore, ...props }: TableProps) => {
               <div
                 key={country.slug}
                 role="row"
-                className={`${i !== data.length - 1 ? 'border-b ' : ''}${i !== data.length - 1 && country.ranking < 11 && data[i + 1].ranking > 10 && sort.by === 'ranking' && sort.order === 'asc' ? 'border-yellow-400 dark:border-yellow-600' : 'border-stone-400 dark:border-stone-600'} relative col-span-full grid grid-cols-subgrid text-lg transition-colors hover:bg-white dark:hover:bg-stone-950`}
+                className={`${i !== data.length - 1 ? 'border-b ' : ''}${i !== data.length - 1 && country.ranking < 11 && data[i + 1].ranking > 10 && sort.by === 'ranking' && sort.order === 'asc' ? 'border-yellow-400 dark:border-yellow-600 ' : ''}relative col-span-full grid grid-cols-subgrid text-lg transition-colors hover:bg-white dark:hover:bg-stone-950`}
               >
                 <div
                   role="cell"

@@ -67,7 +67,7 @@ export default async function Country({ params }: Params) {
         {Object.keys(data).map((dataset) => (
           <dl
             key={dataset}
-            className="relative flex flex-col items-center justify-start gap-1 rounded-md border border-stone-400 p-4 text-center transition-colors hover:bg-white dark:border-stone-600 dark:hover:bg-stone-950"
+            className="relative flex flex-col items-center justify-start gap-1 rounded-md border p-4 text-center transition-colors hover:bg-white dark:hover:bg-stone-950"
           >
             <dt className="text-3xl font-bold leading-none">
               {country.data[dataset] || '--'}

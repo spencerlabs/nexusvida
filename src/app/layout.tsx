@@ -67,7 +67,7 @@ export default function RootLayout({
             <TbArrowNarrowRight aria-hidden className="ml-1 h-4 w-4" />
           </Link>
         )}
-        <header className="sticky top-0 z-30 grid h-12 grid-cols-[1fr_max-content_1fr] items-stretch bg-white px-wrap uppercase dark:bg-stone-950">
+        <header className="sticky top-0 z-30 grid h-12 grid-cols-[1fr_max-content_1fr] items-stretch border-b bg-white px-wrap uppercase dark:bg-stone-950">
           <BackButton />
 
           <Link href="/" className="flex items-center px-2 text-2xl">
@@ -81,7 +81,7 @@ export default function RootLayout({
             </MenuButton>
             <MenuItems
               anchor="bottom end"
-              className="flex flex-col rounded-b-sm bg-white py-2 text-right font-semibold uppercase dark:bg-stone-950"
+              className="z-50 flex flex-col rounded-b-sm border border-t-0 bg-white pb-2 pt-1 text-right font-semibold uppercase dark:bg-stone-950"
             >
               {menuItems.map((item) => (
                 <MenuItem key={item.label}>
@@ -94,7 +94,7 @@ export default function RootLayout({
           </Menu>
         </header>
 
-        <main className="mb-8 flex-1 bg-stone-100 px-wrap py-12 dark:bg-stone-900">
+        <main className="mb-8 flex-1 border-b bg-stone-100 px-wrap py-12 dark:bg-stone-900">
           {children}
         </main>
 
