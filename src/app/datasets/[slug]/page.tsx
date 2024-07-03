@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation'
 
 import DataProvider from '@/components/DataProvider'
 import Table from '@/components/Table'
-import { Country } from '@/interfaces/country'
-import { getDatasetBySlug, getDatasetSlugs } from '@/lib/api'
+import { Country, getDatasetBySlug, getDatasetSlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 
 import type { Metadata } from 'next'

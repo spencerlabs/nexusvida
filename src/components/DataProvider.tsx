@@ -8,8 +8,7 @@ import {
   useState,
 } from 'react'
 
-import { Country } from '@/interfaces/country'
-import { getNexusVidaRankings } from '@/lib/api'
+import { Country, getNexusVidaRankings } from '@/lib/api'
 
 interface DataContextProps {
   data: ReturnType<typeof getNexusVidaRankings>

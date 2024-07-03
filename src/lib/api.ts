@@ -3,32 +3,71 @@ import { join } from 'path'
 
 import matter from 'gray-matter'
 
-import { Continent } from '@/interfaces/continent'
-import { Country } from '@/interfaces/country'
-import { Dataset } from '@/interfaces/dataset'
-
-const continentsDirectory = join(process.cwd(), '_content/continents')
-
-export function getContinentSlugs() {
-  return fs.readdirSync(continentsDirectory)
+type BaseContent = {
+  title: string
+  slug: string
+  content: string
+  published_at?: string
 }
 
-export function getContinentBySlug<C extends boolean = false>(
+function getContentSlugs(dir: string) {
+  return fs.readdirSync(dir)
+}
+
+function getContentBySlug<T extends BaseContent, C extends boolean = false>(
+  dir: string,
   slug: string,
   hideContent?: C,
-): C extends true ? Omit<Continent, 'content'> : Continent
-export function getContinentBySlug(
+): C extends true ? Omit<T, 'content'> : T
+function getContentBySlug<T extends BaseContent>(
+  dir: string,
   slug: string,
   hideContent?: boolean,
-): Omit<Continent, 'content'> | Continent {
+): Omit<T, 'content'> | T {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(continentsDirectory, `${realSlug}.md`)
+  const fullPath = join(dir, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
   if (hideContent) {
-    return { ...data, slug: realSlug } as Continent
+    return { ...data, slug: realSlug } as Omit<T, 'content'>
   }
+
+  return { ...data, slug: realSlug, content } as T
+}
+
+function getAllContent<T extends BaseContent>(dir: string) {
+  const slugs = getContentSlugs(dir)
+  const content = slugs
+    .map((slug) => getContentBySlug<T, true>(dir, slug, true))
+    .filter((content) => {
+      if (!content.published_at) return true
+      return new Date(content.published_at) < new Date()
+    })
+    .sort(
+      // sort items by title in ascending order
+      (content1, content2) => (content1.title < content2.title ? -1 : 1),
+    )
+  return content
+}
+
+// CONTINENTS
+
+export interface Continent {
+  title: string
+  slug: string
+  content: string
+  countries?: (Omit<Country, 'content'> & { score?: string; ranking: number })[]
+}
+
+const continentsDirectory = join(process.cwd(), '_content/continents')
+
+export function getContinentSlugs() {
+  return getContentSlugs(continentsDirectory)
+}
+
+export const getContinentBySlug = (slug: string) => {
+  const continent = getContentBySlug<Continent>(continentsDirectory, slug)
 
   const rankings = getNexusVidaRankings()
 
@@ -37,9 +76,9 @@ export function getContinentBySlug(
       if (!c.continent) return false
 
       if (typeof c.continent === 'string') {
-        return c.continent === realSlug
+        return c.continent === continent.slug
       } else {
-        return c.continent.includes(realSlug)
+        return c.continent.includes(continent.slug)
       }
     })
     .map((c) => ({
@@ -49,83 +88,65 @@ export function getContinentBySlug(
     }))
     .sort((a, b) => (a?.ranking || 300) - (b?.ranking || 300))
 
-  return { ...data, countries, slug: realSlug, content } as Continent
+  return { ...continent, countries }
 }
 
-export function getAllContinents() {
-  const slugs = getContinentSlugs()
-  const continents = slugs
-    .map((slug) => getContinentBySlug(slug, true))
-    // sort continents by date in descending order
-    .sort((continent1, continent2) =>
-      continent1.title < continent2.title ? -1 : 1,
-    )
-  return continents
+export const getAllContinents = () =>
+  getAllContent<Continent>(continentsDirectory)
+
+// COUNTRIES
+
+export interface Country {
+  title: string
+  slug: string
+  content: string
+  icon: string
+  continent: string | string[]
+  data: Record<string, number>
 }
 
 const countriesDirectory = join(process.cwd(), '_content/countries')
 
 export function getCountrySlugs() {
-  return fs.readdirSync(countriesDirectory)
+  return getContentSlugs(countriesDirectory)
 }
 
-export function getCountryBySlug<C extends boolean = false>(
-  slug: string,
-  hideContent?: C,
-): C extends true ? Omit<Country, 'content'> : Country
-export function getCountryBySlug(
-  slug: string,
-  hideContent?: boolean,
-): Omit<Country, 'content'> | Country {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(countriesDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+export const getCountryBySlug = (slug: string) =>
+  getContentBySlug<Country>(countriesDirectory, slug)
 
-  if (hideContent) {
-    return { ...data, slug: realSlug } as Country
+export const getAllCountries = () => getAllContent<Country>(countriesDirectory)
+
+// DATASETS
+
+export interface Dataset {
+  title: string
+  slug: string
+  content: string
+  source: string
+  year: number
+  added: string
+  updated: string
+  url: string
+  countries?: Country[]
+  adjustments?: {
+    excluded?: number[]
   }
-
-  return { ...data, slug: realSlug, content } as Country
-}
-
-export function getAllCountries() {
-  const slugs = getCountrySlugs()
-  const countries = slugs
-    .map((slug) => getCountryBySlug(slug, true))
-    // sort countries by date in descending order
-    .sort((country1, country2) => (country1.title < country2.title ? -1 : 1))
-  return countries
 }
 
 const datasetsDirectory = join(process.cwd(), '_content/datasets')
 
 export function getDatasetSlugs() {
-  return fs.readdirSync(datasetsDirectory)
+  return getContentSlugs(datasetsDirectory)
 }
 
-export function getDatasetBySlug<C extends boolean = false>(
-  slug: string,
-  hideContent?: C,
-): C extends true ? Omit<Dataset, 'content'> : Dataset
-export function getDatasetBySlug(
-  slug: string,
-  hideContent?: boolean,
-): Omit<Dataset, 'content'> | Dataset {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(datasetsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
-
-  if (hideContent) {
-    return { ...data, slug: realSlug } as Dataset
-  }
+export const getDatasetBySlug = (slug: string) => {
+  const dataset = getContentBySlug<Dataset>(datasetsDirectory, slug)
 
   const countries = getAllCountries()
-    .filter((c) => c.data[realSlug])
+    .filter((c) => c.data[dataset.slug])
     .sort((a, b) => {
-      const aVal = a.data[realSlug] as number
-      const bVal = b.data[realSlug] as number
+      const aVal = a.data[dataset.slug] as number
+      const bVal = b.data[dataset.slug] as number
 
       if (aVal === bVal) return 0
       if (!aVal) return 1
@@ -134,17 +155,12 @@ export function getDatasetBySlug(
       return aVal < bVal ? -1 : 1
     })
 
-  return { ...data, countries, slug: realSlug, content } as Dataset
+  return { ...dataset, countries }
 }
 
-export function getAllDatasets() {
-  const slugs = getDatasetSlugs()
-  const datasets = slugs
-    .map((slug) => getDatasetBySlug(slug, true))
-    // sort datasets by date in descending order
-    .sort((dataset1, dataset2) => (dataset1.title < dataset2.title ? -1 : 1))
-  return datasets
-}
+export const getAllDatasets = () => getAllContent<Dataset>(datasetsDirectory)
+
+// RANKINGS
 
 export function calculateScore(values: number[]) {
   const rawScore = values.reduce((sum, a) => sum + a, 0) / values.length
