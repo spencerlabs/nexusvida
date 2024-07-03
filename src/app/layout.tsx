@@ -1,11 +1,13 @@
-import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import Link from 'next/link'
-import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
+
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
 
 import BackButton from '@/components/BackButton'
 import { getAllDatasets } from '@/lib/api'
+
+import type { Metadata } from 'next'
 
 import './globals.css'
 

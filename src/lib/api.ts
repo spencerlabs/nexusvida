@@ -1,9 +1,11 @@
+import fs from 'fs'
+import { join } from 'path'
+
+import matter from 'gray-matter'
+
 import { Continent } from '@/interfaces/continent'
 import { Country } from '@/interfaces/country'
 import { Dataset } from '@/interfaces/dataset'
-import fs from 'fs'
-import matter from 'gray-matter'
-import { join } from 'path'
 
 const continentsDirectory = join(process.cwd(), '_content/continents')
 
@@ -222,7 +224,6 @@ export function getNexusVidaRankings() {
       [] as (Omit<Country, 'content'> & { score?: string; ranking: number })[],
     )
     .map((c) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { data, ...rest } = c
 
       return rest

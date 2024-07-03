@@ -1,9 +1,10 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
+
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Datasets',

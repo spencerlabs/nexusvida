@@ -1,12 +1,12 @@
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
-import type { Metadata } from 'next'
-
+import DataProvider from '@/components/DataProvider'
 import Table from '@/components/Table'
 import { getContinentBySlug, getContinentSlugs } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
-import DataProvider from '@/components/DataProvider'
+
+import type { Metadata } from 'next'
 
 type Params = {
   params: {

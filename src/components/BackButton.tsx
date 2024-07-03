@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
+
 import { TbArrowNarrowLeft } from 'react-icons/tb'
 
 export default function BackButton() {
@@ -10,7 +11,7 @@ export default function BackButton() {
   if (pathname === '/') return <div aria-hidden />
 
   return (
-    <button onClick={router.back} className="px-2 -ml-2 justify-self-start">
+    <button onClick={router.back} className="-ml-2 justify-self-start px-2">
       <TbArrowNarrowLeft aria-hidden className="h-6 w-6" />
     </button>
   )

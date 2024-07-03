@@ -2,9 +2,9 @@
 
 import Link from 'next/link'
 
-import SortButton from './SortButton'
 import { useData } from './DataProvider'
 import SearchFilter from './SearchFilter'
+import SortButton from './SortButton'
 
 interface TableProps extends React.ComponentPropsWithoutRef<'div'> {
   showScore?: boolean
@@ -82,7 +82,9 @@ const Table = ({ showScore, ...props }: TableProps) => {
                   role="cell"
                   className="block p-2 text-center text-sm font-bold"
                 >
-                  {i > 0 && country.ranking && country.ranking === data[i - 1].ranking ? (
+                  {i > 0 &&
+                  country.ranking &&
+                  country.ranking === data[i - 1].ranking ? (
                     <span className="sr-only">{country.ranking}</span>
                   ) : (
                     country.ranking || '--'
