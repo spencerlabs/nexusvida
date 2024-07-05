@@ -1,11 +1,10 @@
 import { Work_Sans } from 'next/font/google'
 import Link from 'next/link'
 
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
 
-import BackButton from '@/components/BackButton'
 import { getAllDatasets } from '@/lib/api'
+import { recent } from '@/lib/recent'
 
 import type { Metadata } from 'next'
 
@@ -27,31 +26,8 @@ export default function RootLayout({
 }>) {
   const datasets = getAllDatasets()
 
-  const recentlyAdded = datasets.filter(
-    (dataset) =>
-      (new Date().getTime() - new Date(dataset.added).getTime()) /
-        1000 /
-        60 /
-        60 /
-        24 <
-      60,
-  )
-
-  const recentlyUpdated = datasets.filter(
-    (dataset) =>
-      (new Date().getTime() - new Date(dataset.updated).getTime()) /
-        1000 /
-        60 /
-        60 /
-        24 <
-      60,
-  )
-
-  const menuItems = [
-    { href: '/countries', label: 'Countries' },
-    { href: '/continents', label: 'Continents' },
-    { href: '/datasets', label: 'Datasets' },
-  ]
+  const recentlyAdded = datasets.filter((dataset) => recent(dataset.added))
+  const recentlyUpdated = datasets.filter((dataset) => recent(dataset.updated))
 
   return (
     <html lang="en">
@@ -70,30 +46,21 @@ export default function RootLayout({
           </Link>
         )}
         <header className="sticky top-0 z-30 grid h-12 grid-cols-[1fr_max-content_1fr] items-stretch border-b bg-white px-wrap uppercase dark:bg-stone-950">
-          <BackButton />
+          <nav className="flex h-full items-stretch text-sm font-bold">
+            <Link href="/countries" className="flex items-center">
+              Countries
+            </Link>
+          </nav>
 
           <Link href="/" className="flex items-center px-2 text-2xl">
             Nexus<span className="font-bold">Vida</span>
           </Link>
 
-          <Menu>
-            <MenuButton className="-mr-2 justify-self-end px-2">
-              <TbMenu aria-hidden className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
-            </MenuButton>
-            <MenuItems
-              anchor="bottom end"
-              className="z-50 flex flex-col rounded-b-sm border border-t-0 bg-white pb-2 pt-1 text-right font-semibold uppercase dark:bg-stone-950"
-            >
-              {menuItems.map((item) => (
-                <MenuItem key={item.label}>
-                  <Link href={item.href} className="px-3 py-2">
-                    {item.label}
-                  </Link>
-                </MenuItem>
-              ))}
-            </MenuItems>
-          </Menu>
+          <nav className="flex h-full items-stretch justify-self-end text-sm font-bold">
+            <Link href="/datasets" className="flex items-center">
+              Datasets
+            </Link>
+          </nav>
         </header>
 
         <main className="mb-8 flex-1 border-b bg-stone-100 px-wrap py-12 dark:bg-stone-900">

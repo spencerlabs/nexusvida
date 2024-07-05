@@ -1,7 +1,14 @@
+import { Fragment } from 'react'
+
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { getAllDatasets, getCountryBySlug, getCountrySlugs } from '@/lib/api'
+import {
+  getAllContinents,
+  getAllDatasets,
+  getCountryBySlug,
+  getCountrySlugs,
+} from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
 
 import type { Metadata } from 'next'
@@ -25,6 +32,16 @@ export default async function Country({ params }: Params) {
 
   if (!country) return notFound()
 
+  const continents = getAllContinents()
+
+  const matchedContinents = continents.filter((c) => {
+    if (typeof country.continent === 'string') {
+      return c.slug === country.continent
+    }
+
+    return country.continent.includes(c.slug)
+  })
+
   const datasets = getAllDatasets()
 
   const content = await markdownToHtml(country.content || '')
@@ -42,7 +59,7 @@ export default async function Country({ params }: Params) {
 
   return (
     <article className="mx-auto w-full max-w-4xl">
-      <header className="mb-8 space-y-1 text-center">
+      <header className="mb-8 space-y-2 text-center">
         <h1 className="">
           <span aria-hidden className="mr-2">
             {country.icon}
@@ -50,15 +67,16 @@ export default async function Country({ params }: Params) {
           {country.title}
         </h1>
 
-        <p className="text-xs">
-          NexusVida API:{' '}
-          <Link
-            href={`/api/countries/${country.slug}`}
-            target="_blank"
-            className="underline hover:no-underline"
-          >
-            Raw Data
-          </Link>
+        <p className="text-sm">
+          View how {country.title} compares to the rest of{' '}
+          {matchedContinents.map((c, i) => (
+            <Fragment key={c.slug}>
+              {i > 0 ? ' or ' : ''}
+              <Link href={`/?continent=${c.slug}`} className="underline">
+                {c.title}
+              </Link>
+            </Fragment>
+          ))}
         </p>
       </header>
 

@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
 import { getAllDatasets } from '@/lib/api'
+import { recent } from '@/lib/recent'
 
 import type { Metadata } from 'next'
 
@@ -19,36 +19,12 @@ export default function DatasetsPage() {
     <div className="mx-auto w-full max-w-4xl">
       <div className="mb-8 space-y-1 text-center">
         <h1>Datasets</h1>
-
-        <p className="text-xs">
-          NexusVida API:{' '}
-          <Link
-            href="/api/datasets"
-            target="_blank"
-            className="underline hover:no-underline"
-          >
-            Raw Data
-          </Link>
-        </p>
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
         {datasets.map((dataset) => {
-          const recentlyAdded =
-            (new Date().getTime() - new Date(dataset.added).getTime()) /
-              1000 /
-              60 /
-              60 /
-              24 <
-            60
-
-          const recentlyUpdated =
-            (new Date().getTime() - new Date(dataset.updated).getTime()) /
-              1000 /
-              60 /
-              60 /
-              24 <
-            60
+          const recentlyAdded = recent(dataset.added)
+          const recentlyUpdated = recent(dataset.updated)
 
           return (
             <ArticleItem key={dataset.slug} href={`/datasets/${dataset.slug}`}>

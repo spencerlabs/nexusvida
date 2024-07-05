@@ -1,44 +1,65 @@
 'use client'
 
-import { TbArrowsSort, TbArrowUp, TbArrowDown } from 'react-icons/tb'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { useData } from './DataProvider'
+import { TbArrowsSort, TbArrowUp, TbArrowDown } from 'react-icons/tb'
+import { useDebouncedCallback } from 'use-debounce'
 
 interface SortButtonProps extends React.ComponentPropsWithoutRef<'button'> {
-  sortByString: string
+  orderBy: string
 }
 
 const SortButton = ({
   children,
   className,
-  sortByString,
+  orderBy,
   ...props
 }: SortButtonProps) => {
-  const { sort, setSort } = useData()
+  const pathname = usePathname()
+  const { replace } = useRouter()
+  const searchParams = useSearchParams()
 
-  const Icon =
-    sort.by !== sortByString || !sort
-      ? TbArrowsSort
-      : sort.order === 'asc'
-        ? TbArrowUp
-        : TbArrowDown
+  const isCurrent = searchParams.get('orderBy')?.toString() === orderBy
+  const order = searchParams.get('order')?.toString()
+
+  const handleSort = useDebouncedCallback((order: 'asc' | 'desc') => {
+    const params = new URLSearchParams(searchParams)
+
+    if (order) {
+      params.set('orderBy', orderBy)
+      params.set('order', order)
+    } else {
+      params.delete('orderBy')
+      params.delete('order')
+    }
+
+    replace(`${pathname}?${params.toString()}`)
+  }, 150)
+
+  const Icon = !isCurrent
+    ? TbArrowsSort
+    : order === 'asc'
+      ? TbArrowUp
+      : TbArrowDown
 
   return (
-    <button
-      {...props}
-      className={`${className ? className + ' ' : ''}flex w-full items-center space-x-1  p-2 uppercase transition-colors hover:text-sky-700 dark:hover:text-sky-300`}
-      onClick={() => {
-        if (sort.by !== sortByString) {
-          setSort({ by: sortByString, order: 'asc' })
-          return
-        }
-
-        setSort({ ...sort, order: sort.order === 'asc' ? 'desc' : 'asc' })
-      }}
+    <div
+      role="columnheader"
+      aria-sort={
+        isCurrent ? (order === 'asc' ? 'ascending' : 'descending') : undefined
+      }
     >
-      <span>{children}</span>
-      <Icon aria-hidden className="h-3 w-3" />
-    </button>
+      <button
+        {...props}
+        className={`${className ? className + ' ' : ''}flex w-full items-center space-x-1  p-2 uppercase transition-colors hover:text-sky-700 dark:hover:text-sky-300`}
+        onClick={() =>
+          handleSort(!isCurrent || order === 'desc' ? 'asc' : 'desc')
+        }
+      >
+        <span>{children}</span>
+        <Icon aria-hidden className="h-3 w-3" />
+      </button>
+    </div>
   )
 }
 

@@ -1,10 +1,9 @@
 import { MetadataRoute } from 'next'
 
-import { getAllContinents, getAllCountries, getAllDatasets } from '@/lib/api'
+import { getAllCountries, getAllDatasets } from '@/lib/api'
 import { site_url } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const continents = getAllContinents()
   const countries = getAllCountries()
   const datasets = getAllDatasets()
 
@@ -35,18 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: `${site_url}/countries`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.6,
-    },
-    ...continents.map((c): MetadataRoute.Sitemap[number] => ({
-      url: `${site_url}/continents/${c.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    })),
-    {
-      url: `${site_url}/continents`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.6,

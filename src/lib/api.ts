@@ -3,6 +3,8 @@ import { join } from 'path'
 
 import matter from 'gray-matter'
 
+import { calculateScore } from '@/lib/calculateScore'
+
 type BaseContent = {
   title: string
   slug: string
@@ -69,24 +71,15 @@ export function getContinentSlugs() {
 export const getContinentBySlug = (slug: string) => {
   const continent = getContentBySlug<Continent>(continentsDirectory, slug)
 
-  const rankings = getNexusVidaRankings()
+  const countries = getAllCountries().filter((c) => {
+    if (!c.continent) return false
 
-  const countries = getAllCountries()
-    .filter((c) => {
-      if (!c.continent) return false
-
-      if (typeof c.continent === 'string') {
-        return c.continent === continent.slug
-      } else {
-        return c.continent.includes(continent.slug)
-      }
-    })
-    .map((c) => ({
-      ...c,
-      ranking: rankings.find((r) => r.slug === c.slug)?.ranking,
-      score: rankings.find((r) => r.slug === c.slug)?.score,
-    }))
-    .sort((a, b) => (a?.ranking || 300) - (b?.ranking || 300))
+    if (typeof c.continent === 'string') {
+      return c.continent === continent.slug
+    } else {
+      return c.continent.includes(continent.slug)
+    }
+  })
 
   return { ...continent, countries }
 }
@@ -162,28 +155,46 @@ export const getAllDatasets = () => getAllContent<Dataset>(datasetsDirectory)
 
 // RANKINGS
 
-export function calculateScore(values: number[]) {
-  const rawScore = values.reduce((sum, a) => sum + a, 0) / values.length
-
-  return (Math.round(rawScore * 100) / 100).toFixed(2)
+type FinalCountry = Omit<Country, 'content'> & {
+  score?: string
+  ranking?: number
 }
 
-export function getNexusVidaRankings() {
-  const datasets = getAllDatasets()
+function haveCommonItems(arr1: string[], arr2: string[]) {
+  const set1 = new Set(arr1)
+  const commonItems = arr2.filter((item) => set1.has(item))
+  return commonItems.length > 0
+}
+
+export const getRankings = (searchParams: URLSearchParams) => {
+  const continents = searchParams.getAll('continent')
+  const datasets = searchParams.getAll('dataset')
+  const orderBy = searchParams.get('orderBy')
+  const order = searchParams.get('order')
+  const query = searchParams.get('query')
+
+  const sort = orderBy ? { orderBy, order } : undefined
+
+  const datasetData = getAllDatasets()
 
   const countries = getAllCountries()
+    // run supplied filters against country data
     .filter((c) => {
-      // Filter out countries that don't have all datasets
-
-      for (const data in c.data) {
-        if (!c.data[data]) return false
+      // check if country has any of the specified continents
+      if (
+        continents.length > 0 &&
+        !haveCommonItems(
+          typeof c.continent === 'string' ? [c.continent] : c.continent,
+          continents,
+        )
+      ) {
+        return false
       }
 
       return true
     })
+    // Adjust data for exclusions in the datasets
     .map((c) => {
-      // Adjust data for exclusions in the datasets
-
       const dataOptions = Object.keys(c.data)
 
       const updatedData: Record<string, number> = {}
@@ -191,7 +202,7 @@ export function getNexusVidaRankings() {
       dataOptions.forEach((opt) => {
         const startingValue = c.data[opt]
 
-        const dataset = datasets.find((d) => d.slug === opt)!
+        const dataset = datasetData.find((d) => d.slug === opt)!
 
         if (!dataset.adjustments || !dataset.adjustments.excluded) {
           updatedData[opt] = startingValue
@@ -215,34 +226,107 @@ export function getNexusVidaRankings() {
         data: updatedData,
       }
     })
+    // add ranking data to each remaining country
     .map((c) => {
-      // Create the score and add it to the dataset
-      return { ...c, score: calculateScore(Object.values(c.data)) }
-    })
-    .sort((a, b) => (Number(a.score) < Number(b.score) ? -1 : 1))
-    .reduce(
-      (prev, current, i) => {
-        // Add ranking to dataset
-        let ranking = i + 1
+      if (datasets.length > 0) {
+        const values: number[] = []
 
-        if (i > 0 && current.score === prev[prev.length - 1].score) {
-          ranking = prev[prev.length - 1].ranking
+        for (let i = 0; i < datasets.length; i++) {
+          const dataset = datasets[i]
+
+          if (!c.data[dataset]) continue
+
+          values.push(c.data[dataset])
         }
 
+        return {
+          ...c,
+          score:
+            values.length === datasets.length
+              ? calculateScore(values)
+              : undefined,
+        }
+      }
+
+      function isValid() {
+        // If no datasets specified, filter out countries that don't have all datasets
+        for (const data in c.data) {
+          if (!c.data[data]) return false
+        }
+
+        return true
+      }
+
+      return {
+        ...c,
+        score: isValid() ? calculateScore(Object.values(c.data)) : undefined,
+      }
+    })
+    // sort by provided sort or default to score
+    .sort((a, b) => Number(a.score || 300) - Number(b.score || 300))
+    // Add ranking to dataset
+    .reduce((prev, current, i) => {
+      if (
+        !current.score ||
+        (prev[prev.length - 1] && !prev[prev.length - 1].ranking)
+      ) {
         return [
           ...prev,
           {
             ...current,
-            ranking,
+            ranking: undefined,
           },
         ]
-      },
-      [] as (Omit<Country, 'content'> & { score?: string; ranking: number })[],
-    )
-    .map((c) => {
-      const { data, ...rest } = c
+      }
 
-      return rest
+      let ranking = i + 1
+
+      if (i > 0 && current.score === prev[prev.length - 1].score) {
+        ranking = prev[prev.length - 1].ranking!
+      }
+
+      return [
+        ...prev,
+        {
+          ...current,
+          ranking,
+        },
+      ]
+    }, [] as FinalCountry[])
+    // sort by provided sort or default to score
+    .sort((a, b) => {
+      if (!sort || !sort.orderBy) {
+        return Number(a.score || 300) - Number(b.score || 300)
+      }
+
+      const aVal = a[sort.orderBy as keyof FinalCountry]
+      const bVal = b[sort.orderBy as keyof FinalCountry]
+
+      if (typeof aVal === 'string' && typeof bVal === 'string') {
+        return sort.order === 'desc'
+          ? aVal > bVal
+            ? -1
+            : 1
+          : aVal < bVal
+            ? -1
+            : 1
+      }
+
+      return sort.order === 'desc'
+        ? Number(aVal) > Number(bVal)
+          ? -1
+          : 1
+        : Number(aVal) < Number(bVal)
+          ? -1
+          : 1
+    })
+    // run query filter last to maintain ranking data
+    .filter((c) => {
+      if (query && !c.title.toLowerCase().includes(query.toLowerCase())) {
+        return false
+      }
+
+      return true
     })
 
   return countries

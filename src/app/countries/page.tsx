@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
@@ -19,17 +18,6 @@ export default function CountriesPage() {
     <div className="mx-auto w-full max-w-4xl">
       <div className="mb-8 space-y-1 text-center">
         <h1>Countries</h1>
-
-        <p className="text-xs">
-          NexusVida API:{' '}
-          <Link
-            href="/api/countries"
-            target="_blank"
-            className="underline hover:no-underline"
-          >
-            Raw Data
-          </Link>
-        </p>
       </div>
 
       <div className="flex flex-wrap justify-center gap-4">
