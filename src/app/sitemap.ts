@@ -1,11 +1,11 @@
 import { MetadataRoute } from 'next'
 
-import { getAllCountries, getAllDatasets } from '@/lib/api'
 import { site_url } from '@/lib/constants'
+import { prisma } from '@/lib/prisma'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const countries = getAllCountries()
-  const datasets = getAllDatasets()
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const countries = await prisma.country.findMany()
+  const datasets = await prisma.dataset.findMany()
 
   return [
     {
@@ -21,13 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...datasets.map((d): MetadataRoute.Sitemap[number] => ({
-      url: `${site_url}/datasets/${d.slug}`,
+      url: `${site_url}/datasets/${d.id}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.8,
     })),
     ...countries.map((c): MetadataRoute.Sitemap[number] => ({
-      url: `${site_url}/countries/${c.slug}`,
+      url: `${site_url}/countries/${c.id}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

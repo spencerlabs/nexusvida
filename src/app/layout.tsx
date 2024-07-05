@@ -1,9 +1,9 @@
 import { Work_Sans } from 'next/font/google'
 import Link from 'next/link'
 
-import { TbArrowNarrowRight, TbMenu } from 'react-icons/tb'
+import { TbArrowNarrowRight } from 'react-icons/tb'
 
-import { getAllDatasets } from '@/lib/api'
+import { prisma } from '@/lib/prisma'
 import { recent } from '@/lib/recent'
 
 import type { Metadata } from 'next'
@@ -19,15 +19,21 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const datasets = getAllDatasets()
+  const datasets = await prisma.dataset.findMany({
+    orderBy: {
+      name: 'asc',
+    },
+  })
 
-  const recentlyAdded = datasets.filter((dataset) => recent(dataset.added))
-  const recentlyUpdated = datasets.filter((dataset) => recent(dataset.updated))
+  const recentlyAdded = datasets.filter((dataset) => recent(dataset.created_at))
+  const recentlyUpdated = datasets.filter((dataset) =>
+    recent(dataset.updated_at),
+  )
 
   return (
     <html lang="en">

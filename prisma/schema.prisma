@@ -1,0 +1,54 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = "native"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Continent {
+  id        String    @id
+  name      String
+  countries Country[]
+}
+
+model Country {
+  id         String        @id
+  name       String
+  icon       String
+  continents Continent[]
+  datasets   CountryData[]
+}
+
+model CountryData {
+  country   Country @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  countryId String
+  dataset   Dataset @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  datasetId String
+  value     Int
+
+  @@id([countryId, datasetId])
+}
+
+model Dataset {
+  id          String            @id
+  name        String
+  description String
+  year        Int
+  source      String
+  url         String
+  excludes    DatasetExcludes[]
+  countries   CountryData[]
+  created_at  DateTime          @default(now())
+  updated_at  DateTime          @updatedAt
+}
+
+model DatasetExcludes {
+  dataset   Dataset @relation(fields: [datasetId], references: [id], onDelete: Cascade)
+  datasetId String
+  value     Int
+
+  @@id([datasetId, value])
+}

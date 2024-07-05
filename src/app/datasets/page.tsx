@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 
 import ArticleItem from '@/components/ArticleItem'
-import { getAllDatasets } from '@/lib/api'
+import { prisma } from '@/lib/prisma'
 import { recent } from '@/lib/recent'
 
 import type { Metadata } from 'next'
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: 'Datasets',
 }
 
-export default function DatasetsPage() {
-  const datasets = getAllDatasets()
+export default async function DatasetsPage() {
+  const datasets = await prisma.dataset.findMany()
 
   if (datasets.length === 0) return notFound()
 
@@ -23,11 +23,11 @@ export default function DatasetsPage() {
 
       <div className="flex flex-wrap justify-center gap-4">
         {datasets.map((dataset) => {
-          const recentlyAdded = recent(dataset.added)
-          const recentlyUpdated = recent(dataset.updated)
+          const recentlyAdded = recent(dataset.created_at)
+          const recentlyUpdated = recent(dataset.updated_at)
 
           return (
-            <ArticleItem key={dataset.slug} href={`/datasets/${dataset.slug}`}>
+            <ArticleItem key={dataset.id} href={`/datasets/${dataset.id}`}>
               <span className="block py-1">
                 {(recentlyAdded || recentlyUpdated) && (
                   <span
@@ -37,7 +37,7 @@ export default function DatasetsPage() {
                     <span className="sr-only">:</span>
                   </span>
                 )}
-                {dataset.title}
+                {dataset.name}
               </span>
             </ArticleItem>
           )
