@@ -8,12 +8,13 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 
 type Params = {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
   const country = await prisma.country.findUnique({
     where: { id: params.id },
   })
@@ -25,7 +26,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 }
 
-export default async function Country({ params }: Params) {
+export default async function Country(props: Params) {
+  const params = await props.params;
   const country = await prisma.country.findUnique({
     where: { id: params.id },
     include: {

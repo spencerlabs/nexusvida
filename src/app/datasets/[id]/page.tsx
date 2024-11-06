@@ -9,17 +9,18 @@ import { recent } from '@/lib/recent'
 import type { Metadata } from 'next'
 
 type Params = {
-  params: {
+  params: Promise<{
     id: string
-  }
-  searchParams: {
+  }>
+  searchParams: Promise<{
     orderBy?: string
     order?: string
     query?: string
-  }
+  }>
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
+export async function generateMetadata(props: Params): Promise<Metadata> {
+  const params = await props.params;
   const dataset = await prisma.dataset.findUnique({
     where: { id: params.id },
   })
@@ -31,7 +32,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 }
 
-export default async function Dataset({ params, searchParams }: Params) {
+export default async function Dataset(props: Params) {
+  const params = await props.params;
   const dataset = await prisma.dataset.findUnique({
     where: { id: params.id },
   })
