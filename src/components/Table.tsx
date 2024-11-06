@@ -8,6 +8,7 @@ import { NextResponse } from 'next/server'
 
 import { GET } from '@/app/api/rankings/route'
 import SortButton from '@/components/SortButton'
+import { site_url } from '@/lib/constants'
 
 type ExtractJsonResponseType<
   T extends (...args: any) => Promise<NextResponse>,
@@ -41,7 +42,7 @@ function TableInner({ dataset, ...props }: TableProps) {
   useEffect(() => {
     const fetchCountries = async () => {
       const response = await fetch(
-        `/api/rankings?${readableSearchParams.toString()}`,
+        `${site_url}/api/rankings?${readableSearchParams.toString()}`,
       )
       const data = await (response as Awaited<ReturnType<typeof GET>>).json()
       setCountries(data.countries)
