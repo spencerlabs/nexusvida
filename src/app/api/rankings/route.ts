@@ -1,27 +1,30 @@
+import { NextResponse, type NextRequest } from 'next/server'
+
 import { calculateScore } from '@/lib/calculateScore'
 import { prisma } from '@/lib/prisma'
 
 import type { Prisma } from '@prisma/client'
 
-// RANKINGS
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams
 
-export const getCountryRankings = async (searchParams: URLSearchParams) => {
   const queries: Prisma.CountryWhereInput = {}
 
+  const continents = searchParams.getAll('continent')
   const datasets = searchParams.getAll('dataset')
-  const orderBy = searchParams.get('orderBy')
   const order = searchParams.get('order')
+  const orderBy = searchParams.get('orderBy')
   const query = searchParams.get('query')
 
   const sort = orderBy ? { orderBy, order } : undefined
 
   const datasetCount = await prisma.dataset.count()
 
-  if (searchParams && searchParams?.getAll('continent').length > 0) {
+  if (continents && continents.length > 0) {
     queries.continents = {
       some: {
         id: {
-          in: searchParams.getAll('continent'),
+          in: continents,
         },
       },
     }
@@ -29,11 +32,16 @@ export const getCountryRankings = async (searchParams: URLSearchParams) => {
 
   const prismaCountries = await prisma.country.findMany({
     where: { ...queries },
-    include: {
+    select: {
+      id: true,
+      name: true,
+      icon: true,
       datasets: {
-        include: {
+        select: {
+          value: true,
           dataset: {
-            include: {
+            select: {
+              id: true,
               excludes: true,
             },
           },
@@ -177,5 +185,5 @@ export const getCountryRankings = async (searchParams: URLSearchParams) => {
       return true
     })
 
-  return countries
+  return NextResponse.json({ countries: countries })
 }

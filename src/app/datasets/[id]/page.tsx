@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 
 import Filters from '@/components/Filters'
 import Table from '@/components/Table'
-import { createSearchParams } from '@/lib/createSearchParams'
 import { prisma } from '@/lib/prisma'
 import { recent } from '@/lib/recent'
 
@@ -78,10 +77,7 @@ export default async function Dataset({ params, searchParams }: Params) {
 
       <Filters searchOnly />
 
-      <Table
-        aria-labelledby="table-label"
-        searchParams={createSearchParams(searchParams)}
-      />
+      <Table aria-labelledby="table-label" dataset={dataset.id} />
     </article>
   )
 }

@@ -40,7 +40,7 @@ export default async function RootLayout({
       <body
         className={`${font.className} flex min-h-screen w-full flex-col bg-white text-stone-950 dark:bg-stone-950 dark:text-stone-50`}
       >
-        {(recentlyAdded || recentlyUpdated) && (
+        {(recentlyAdded.length > 0 || recentlyUpdated.length > 0) && (
           <Link
             href="/datasets"
             className={`${recentlyAdded ? 'bg-sky-300 dark:bg-sky-700' : 'bg-amber-300 dark:bg-amber-700'} flex items-center justify-center px-wrap py-1 text-sm font-semibold hover:bg-opacity-80 hover:text-stone-950 hover:dark:text-stone-50`}

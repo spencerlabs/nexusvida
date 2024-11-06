@@ -1,14 +1,7 @@
 import Filters from '@/components/Filters'
 import Table from '@/components/Table'
-import { createSearchParams } from '@/lib/createSearchParams'
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
-}) {
-  const newSearchParams = createSearchParams(searchParams)
-
+export default async function Home() {
   return (
     <div className="mx-auto w-full max-w-md">
       <div className="mb-8 space-y-1 text-center">
@@ -17,7 +10,7 @@ export default async function Home({
 
       <Filters />
 
-      <Table aria-labelledby="table-label" searchParams={newSearchParams} />
+      <Table aria-labelledby="table-label" />
     </div>
   )
 }

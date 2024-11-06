@@ -1,22 +1,54 @@
-import { Suspense } from 'react'
+'use client'
+
+import { Suspense, useEffect, useMemo, useState } from 'react'
 
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
+import { NextResponse } from 'next/server'
 
+import { GET } from '@/app/api/rankings/route'
 import SortButton from '@/components/SortButton'
-import { getCountryRankings } from '@/lib/api'
+
+type ExtractJsonResponseType<
+  T extends (...args: any) => Promise<NextResponse>,
+> =
+  Awaited<ReturnType<T>> extends NextResponse<infer JsonType> ? JsonType : never
 
 interface TableProps
   extends Omit<React.ComponentPropsWithoutRef<'div'>, 'children'> {
-  searchParams?: URLSearchParams
+  dataset?: string
 }
 
-export default async function Table({ searchParams, ...props }: TableProps) {
-  const countries = await getCountryRankings(
-    searchParams || new URLSearchParams(),
+export default function Table({ dataset, ...props }: TableProps) {
+  const searchParams = useSearchParams()
+
+  const [countries, setCountries] = useState<
+    ExtractJsonResponseType<typeof GET>['countries'] | null
+  >(null)
+
+  const readableSearchParams = useMemo(
+    () => new URLSearchParams(searchParams.toString()),
+    [searchParams],
   )
 
-  const orderBy = searchParams?.get('orderBy')
-  const order = searchParams?.get('order')
+  const orderBy = readableSearchParams.get('orderBy')
+  const order = readableSearchParams.get('order')
+
+  if (dataset) {
+    readableSearchParams.set('dataset', dataset)
+  }
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      const response = await fetch(
+        `/api/rankings?${readableSearchParams.toString()}`,
+      )
+      const data = await (response as Awaited<ReturnType<typeof GET>>).json()
+      setCountries(data.countries)
+    }
+
+    fetchCountries()
+  }, [readableSearchParams, dataset])
 
   return (
     <div
@@ -36,7 +68,7 @@ export default async function Table({ searchParams, ...props }: TableProps) {
             <SortButton className="text-left" orderBy="ranking">
               Rank
             </SortButton>
-            <SortButton className="text-center" orderBy="title">
+            <SortButton className="text-center" orderBy="name">
               Name
             </SortButton>
           </Suspense>
@@ -46,7 +78,8 @@ export default async function Table({ searchParams, ...props }: TableProps) {
         </div>
       </div>
       <div role="rowgroup" className="col-span-full grid grid-cols-subgrid">
-        {countries.length > 0 &&
+        {countries ? (
+          countries.length > 0 &&
           countries.map((country, i) => (
             <div
               key={country.id}
@@ -84,7 +117,15 @@ export default async function Table({ searchParams, ...props }: TableProps) {
                 {country.score}
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <div
+            role="row"
+            className="col-span-full grid p-2 text-center text-lg"
+          >
+            Loading...
+          </div>
+        )}
       </div>
     </div>
   )
