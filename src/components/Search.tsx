@@ -1,12 +1,14 @@
 'use client'
 
+import { Suspense } from 'react'
+
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import { useDebouncedCallback } from 'use-debounce'
 
 interface SearchProps extends React.ComponentPropsWithoutRef<'input'> {}
 
-export default function Search({ id, onChange, ...rest }: SearchProps) {
+function SearchInner({ id, onChange, ...rest }: SearchProps) {
   const pathname = usePathname()
   const { replace } = useRouter()
   const searchParams = useSearchParams()
@@ -43,5 +45,13 @@ export default function Search({ id, onChange, ...rest }: SearchProps) {
         placeholder="Search countries..."
       />
     </>
+  )
+}
+
+export default function Search(props: SearchProps) {
+  return (
+    <Suspense>
+      <SearchInner {...props} />{' '}
+    </Suspense>
   )
 }

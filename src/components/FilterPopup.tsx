@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
 import { useSearchParams } from 'next/navigation'
 
@@ -12,17 +12,13 @@ import {
 } from '@headlessui/react'
 import { TbFilter, TbFilterFilled } from 'react-icons/tb'
 
-export default function FilterPopup({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+function FilterPopupInner({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams()
 
   const [isOpen, setIsOpen] = useState(false)
 
   const hasFilters = () => {
-    const tempParams = new URLSearchParams(searchParams)
+    const tempParams = new URLSearchParams(searchParams.toString())
 
     tempParams.delete('query')
     tempParams.delete('orderBy')
@@ -55,5 +51,17 @@ export default function FilterPopup({
         </div>
       </Dialog>
     </>
+  )
+}
+
+export default function FilterPopup({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <Suspense>
+      <FilterPopupInner>{children}</FilterPopupInner>{' '}
+    </Suspense>
   )
 }

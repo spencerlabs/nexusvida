@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
@@ -26,11 +26,7 @@ type FilterFieldProps = {
   options: Option[]
 }
 
-export default function FilterField({
-  label,
-  name,
-  options,
-}: FilterFieldProps) {
+function FilterFieldInner({ label, name, options }: FilterFieldProps) {
   const pathname = usePathname()
   const { replace } = useRouter()
   const searchParams = useSearchParams()
@@ -52,7 +48,7 @@ export default function FilterField({
   const onClose = () => {
     setComboboxQuery('')
 
-    const params = new URLSearchParams(searchParams)
+    const params = new URLSearchParams(searchParams.toString())
 
     params.delete(name)
 
@@ -115,5 +111,13 @@ export default function FilterField({
         </ComboboxOptions>
       </Combobox>
     </Field>
+  )
+}
+
+export default function FilterField(props: FilterFieldProps) {
+  return (
+    <Suspense>
+      <FilterFieldInner {...props} />
+    </Suspense>
   )
 }

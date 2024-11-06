@@ -1,5 +1,7 @@
 'use client'
 
+import { Suspense } from 'react'
+
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import { TbArrowsSort, TbArrowUp, TbArrowDown } from 'react-icons/tb'
@@ -9,7 +11,7 @@ interface SortButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   orderBy: string
 }
 
-const SortButton = ({
+const SortButtonInner = ({
   children,
   className,
   orderBy,
@@ -23,7 +25,7 @@ const SortButton = ({
   const order = searchParams.get('order')?.toString()
 
   const handleSort = useDebouncedCallback((order: 'asc' | 'desc') => {
-    const params = new URLSearchParams(searchParams)
+    const params = new URLSearchParams(searchParams.toString())
 
     if (order) {
       params.set('orderBy', orderBy)
@@ -63,4 +65,10 @@ const SortButton = ({
   )
 }
 
-export default SortButton
+export default function SortButton(props: SortButtonProps) {
+  return (
+    <Suspense>
+      <SortButtonInner {...props} />
+    </Suspense>
+  )
+}

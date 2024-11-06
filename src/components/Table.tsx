@@ -19,7 +19,7 @@ interface TableProps
   dataset?: string
 }
 
-export default function Table({ dataset, ...props }: TableProps) {
+function TableInner({ dataset, ...props }: TableProps) {
   const searchParams = useSearchParams()
 
   const [countries, setCountries] = useState<
@@ -64,14 +64,12 @@ export default function Table({ dataset, ...props }: TableProps) {
           role="row"
           className="col-span-full grid grid-cols-subgrid border-b-2 bg-stone-100 text-xs font-bold uppercase dark:bg-stone-900"
         >
-          <Suspense>
-            <SortButton className="text-left" orderBy="ranking">
-              Rank
-            </SortButton>
-            <SortButton className="text-center" orderBy="name">
-              Name
-            </SortButton>
-          </Suspense>
+          <SortButton className="text-left" orderBy="ranking">
+            Rank
+          </SortButton>
+          <SortButton className="text-center" orderBy="name">
+            Name
+          </SortButton>
           <div role="columnheader" className="p-2">
             Score
           </div>
@@ -128,5 +126,13 @@ export default function Table({ dataset, ...props }: TableProps) {
         )}
       </div>
     </div>
+  )
+}
+
+export default function Table(props: TableProps) {
+  return (
+    <Suspense>
+      <TableInner {...props} />
+    </Suspense>
   )
 }
